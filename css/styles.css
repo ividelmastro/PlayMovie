@@ -1,0 +1,17 @@
+.trailer {
+    float: center;
+    width: 100%;
+    background-attachment: inherit;
+    background-position: top;
+}
+
+.menu {
+   
+
+}
+
+.logo {
+    float: top left; 
+    width: 250px; 
+}
+
