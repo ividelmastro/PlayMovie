@@ -40,8 +40,10 @@
 
 
 .imagenPP{
+    display: flex;
+    flex-direction: row;
     width: 800px;
-    height: 75vh;
+    height: 55vh;
     margin-top: 1%;
     margin-left: 3%;
     margin-right: 3%;
