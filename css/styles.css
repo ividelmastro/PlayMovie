@@ -1,23 +1,122 @@
-.trailer {
-    float: center;
-    width: 100%;
-    background-attachment: inherit;
-    background-position: top;
+*{box-sizing: border-box;}
+
+.logo{
+    width: 420px;
+    height: 420px;
+    margin-left: 0%;
+    margin-top: 0%;
 }
 
-.menu {
-    margin:0;
-    padding:0;
-    list-style-type:none;
-    float:left; 
-    display:block;
+.nav1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.nav2{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    width: fit-content;
+    margin-left: 4%;
+}
+.nav3{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: right;
+    align-content: top center;
+
+}
+.nave {
+    font-size: 25px;
+    font-weight: bold;
+    color: #678;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.nave:hover{
+    color: white;
+}
+
+
+.imagenPP{
+    width: 800px;
+    height: 75vh;
+    margin-top: 1%;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-bottom: 1%;
+    border-radius: 15px;
+}
+
+.bottonsearch{
+    height: 40px;
+    width: 8vh;
+    background-color: aqua;
+    color: blue;
+
+}
+
+.search{
+    height: 40px;
+    width: 100px;
+}
+
+.fotogame{
+
+    width: 800px;
+    height: 75vh;
+    margin-top: 1%;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-bottom: 1%;
+    border-radius: 15px;
+}
+
+.info{
+    font-size: 20px;
+    color:blueviolet;
+}
+
+.info2{
+    font-size: 20px;
+    color: red;
+}
+
+.generos{
+    background-color: aquamarine;
+    color: azure;
+    width: 180px;
+    height: 50px;
+    border-radius: 9px;
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+}
+
+.listas{
+    display: flex; 
+    flex-wrap: wrap;
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: center;
     
-
-
 }
 
-.logo {
-    float: top left; 
-    width: 150px; 
+.fototg{
+    width: 800px;
+    height: 75vh;
+    margin-top: 1%;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-bottom: 1%;
+    border-radius: 15px;
+
+    
 }
 
+
+.estrella{
+    width: 250px;
+    padding: 2px;
+}

@@ -13,212 +13,225 @@
 
 <body>
 
-<header>
 
-    <nav>
-        <div class = "navegacion">
-            <div class = "logo">
-                <img src="./img/3.png" alt="logo">
-            </div>
-        
-            <ul class = "menu">
-                <li> <a href=""> | GÉNEROS | </a> </li>
-                <li> <a href="favoritos.html">FAVORITOS |</a></li>
+
+<nav class="nav1">
+    <div class="logoynav">
+        <a  href="./home.html">
+            <img class="logo" src="./img/3.png" alt="logo" >
+        </a>
+        <div class="nav2">
+            <ul class="nav3">
+                <li class="item uno " >
+                    <a class="nave" href="./genres.html"> |  Géneros |</a>
+                </li>
+                <li class="item dos">
+                    <a class="nave" href="./favorites.html">  Favoritos  </a> 
+                </li>
+                    </a>
             </ul>
         </div>
-        <form class = "busqueda" action="./search-results.html" method= "get"> 
-            <input class = "buscar" type= text name = "Buscar" placeholder="Search" value = " ">
-            <button class = "boton_search" type = "submit"> Buscar </button>
-        </form>
-    
-    </nav>
+    </div>
+    <form class="busqueda" action="./search-results.html" method="get">
+        <input class="search" type="text" name="Search" placeholder="Search" value=""> 
+        <button class="bottonsearch" type="submit">Buscar</button>    
+    </form>
+</nav>
 
-</header>
-    
-    <video autoplay muted loop class="trailer">
+<video autoplay muted loop class="trailer">
         <source src="./img/trailer.mp4" type="video/mp4">
     </video>
 
-<div class = "primer_apartado">
-    <h2 class = "titulo">Peliculas Populares</h2>
-
-
-<section class = "peliculas_populares">
-    <article class = "pelicula">  
-        <a href="./detail_movie.html"> 
-            <img src="img/topgun.webp" alt="Top Gun"> <br><br>
-            <div class="info">
-                <h3>Top Gun</h3>
-                <h4>27-05-2022</h4>
-            </div> 
-        </a>
-    </article> 
-            
-    <article class = "pelicula">  
-        <a href="./detail_movie.html"> 
-            <img src="img/avatar.jpeg" alt="Top Gun"> <br><br>
-            <div class="info">
-                <h3>Avatar</h3>
-                <h4>01-01-2010</h4>
-            </div> 
-        </a>
-    </article> 
-   
-    <article class = "pelicula">  
-        <a href="./detail_movie.html"> 
-            <img src="img/bajolamismaestrella.jpeg" alt="Top Gun"> <br><br>
-            <div class="info">
-                <h3>Bajo la misma estrella</h3>
-                <h4>26-06-2014</h4>
-            </div> 
-        </a>
-    </article> 
-
-    <article class = "pelicula">  
-        <a href="./detail_movie.html"> 
-            <img src="img/avengers.jpeg" alt="Top Gun"> <br><br>
-            <div class="info">
-                <h3>Avengers: Inifnity War</h3>
-                <h4>26-04-2018</h4>
-            </div> 
-        </a>
-    </article> 
-
-    <article class = "pelicula">  
-        <a href="./detail_movie.html"> 
-            <img src="img/soncomoniños.jpeg" alt="Top Gun"> <br><br>
-            <div class="info">
-                <h3>Son como niños</h3>
-                <h4>22-07-2010</h4>
-            </div> 
-        </a>
-    </article> 
-
-
-</section>
-
-<section class = "series_populares">
-    <article class = "serie">  
-        <a href="./detail_movie.html"> 
-            <img src="img/thecrown.jpeg" alt="Top Gun"> <br><br>
-            <div class="info">
-                <h3>The Crown</h3>
-                <h4>04-11-2016</h4>
-            </div> 
-        </a>
-    </article> 
-            
-    <article class = "serie">  
-        <a href="./detail_movie.html"> 
-            <img src="img/scandal.jpeg" alt="Top Gun"> <br><br>
-            <div class="info">
-                <h3>Scandal</h3>
-                <h4>05-04-2012</h4>
-            </div> 
-        </a>
-    </article> 
-   
-    <article class = "serie">  
-        <a href="./detail_movie.html"> 
-            <img src="img/gossip.webp" alt="Top Gun"> <br><br>
-            <div class="info">
-                <h3>Gossip Girl</h3>
-                <h4>19-09-2007</h4>
-            </div> 
-        </a>
-    </article> 
-
-    <article class = "serie">  
-        <a href="./detail_movie.html"> 
-            <img src="img/breaking bad.jpeg" alt="Top Gun"> <br><br>
-            <div class="info">
-                <h3>Breaking Bad</h3>
-                <h4>20-01-2008</h4>
-            </div> 
-        </a>
-    </article> 
-
-    <article class = "serie">  
-        <a href="./detail_movie.html"> 
-            <img src="img/friends.jpeg" alt="Top Gun"> <br><br>
-            <div class="info">
-                <h3>Friends</h3>
-                <h4>22-09-1994</h4>
-            </div> 
-        </a>
-    </article> 
-
-
-</section>
-
-<section class = "peliculas_animadas">
-    <article class = "animada">  
-        <a href="./detail_movie.html"> 
-            <img src="img/coco.jpeg" alt="Top Gun"> <br><br>
-            <div class="info">
-                <h3>Coco</h3>
-                <h4>22-11-2017</h4>
-            </div> 
-        </a>
-    </article> 
-            
-    <article class = "animada">  
-        <a href="./detail_movie.html"> 
-            <img src="img/intensamente.jpeg" alt="Top Gun"> <br><br>
-            <div class="info">
-                <h3>Intensamente</h3>
-                <h4>19-05-2015</h4>
-            </div> 
-        </a>
-    </article> 
-   
-    <article class = "animada">  
-        <a href="./detail_movie.html"> 
-            <img src="img/zoo.jpeg" alt="Top Gun"> <br><br>
-            <div class="info">
-                <h3>Zootopia</h3>
-                <h4>17-03-2016</h4>
-            </div> 
-        </a>
-    </article> 
-
-    <article class = "animada">  
-        <a href="./detail_movie.html"> 
-            <img src="img/toy story.jpeg" alt="Top Gun"> <br><br>
-            <div class="info">
-                <h3>Toy Story 4</h3>
-                <h4>21-06-2019</h4>
-            </div> 
-        </a>
-    </article> 
-
-    <article class = "serie">  
-        <a href="./detail_movie.html"> 
-            <img src="img/mivillanofav.jpeg" alt="Top Gun"> <br><br>
-            <div class="info">
-                <h3>Mi Villano Favorito 2</h3>
-                <h4>04-07-2013</h4>
-            </div> 
-        </a>
-    </article> 
-
-</section>
-
-</div>
-
-
-<footer>
-    <div class="footer">
-        <p class="iconosindex"> <i class="fa-brands fa-twitter"></i>  <i class="fa-brands fa-square-facebook"></i> <i class="fa-brands fa-spotify"> </i> <i class="fa-brands fa-apple"></i> <i class="fa-brands fa-amazon"></i> <i class="fa-brands fa-instagram"></i></p>
-        <br>
-        <br>
-        <p>© 2001-2022 PlayMovie, Inc (d78383-c92736)</p>
-
+<div class = "primer_apartado"> 
+    <h2 class = 'tipodepalabra'>Peliculas Populares</h2>
     </div>
 
 
+<section class = "peliculas_populares" >
 
-    </ul>
+<ul class="listas">
+    <a href="./detail_movie.html"> 
+        <article class = "pelicula">  
+            <img class="imagenPP" src="img/topgun.webp" alt="Top Gun"> 
+            <div class="info">
+                <p class = 'titulo'> Top Gun</p>
+                <p class = 'anio'> 27-05-202</p>
+
+            </div> 
+        </article> 
+    </a>
+
+            
+    <a href="./detail_movie.html"> 
+        <article class = "pelicula">  
+       
+            <img class="imagenPP" src="img/avatar.jpeg" alt="Top Gun"> <br><br>
+            <div class="info">
+                <p class = 'titulo'> Avatar</p>
+                <p class = 'anio'>01-01-2010 </p>
+                
+            </div> 
+        </article> 
+    </a>
+   
+   
+    <a href="./detail_movie.html"> 
+        <article class = "pelicula">  
+            <img class="imagenPP" src="img/bajolamismaestrella.jpeg" alt="Top Gun"> <br><br>
+            <div class="info">
+                <p class = 'titulo'> Bajo la misma estrella</p>
+                <p class = 'anio'>26-06-2014</p>
+            </div> 
+        </article>
+    </a> 
+
+    <a href="./detail_movie.html">
+        <article class = "pelicula">  
+            <img class="imagenPP" src="img/avengers.jpeg" alt="Top Gun"> <br><br>
+            <div class="info">
+                <p class = 'titulo'> Avengers: Inifnity War</p>
+                <p class = 'anio'>26-04-2018</p>
+            </div> 
+        </article>
+    </a> 
+
+    <a href="./detail_movie.html">
+        <article class = "pelicula">
+            <img class="imagenPP" src="img/soncomoniños.jpeg" alt="Top Gun"> <br><br>
+            <div class="info">
+                <p class = 'titulo'> Son como niños</p>
+                <p class = 'anio'>22-07-2010</p>
+            </div>
+        </article>
+    </a> 
+
+</ul>
+</section>
+
+
+<div class = "palabra">
+    <h2 class="tipodepalabra">Series Populares</h2>
+</div>
+
+<section class = "series_populares" >
+<ul class="listas">
+    <a href="./detail_movie.html"> 
+    <article class = "serie">
+        <img class="imagenPP" src="img/thecrown.jpeg" alt="Top Gun"> <br><br>
+        <div class="info">
+            <p class = 'titulo'> The Crown</p>
+            <p class = 'anio'>04-11-2016</p>
+        </div>
+    </article>
+</a>
+<a href="./detail_movie.html">            
+    <article class = "serie">
+        <img class="imagenPP" src="img/scandal.jpeg" alt="Top Gun"> <br><br>
+        <div class="info">
+            <p class = 'titulo'> Scandal</p>
+            <p class = 'anio'>05-04-2012</p>
+        </div> 
+    </article>
+</a> 
+ 
+<a href="./detail_movie.html"> 
+    <article class = "serie">  
+            <img class="imagenPP" src="img/gossip.webp" alt="Top Gun"> <br><br>
+            <div class="info">
+                <p class = 'titulo'> Gossip Girl</p>
+                <p class = 'anio'>19-09-2007</p>
+            </div>
+    </article> 
+</a>
+
+<a href="./detail_movie.html"></a>
+    <article class = "serie">   
+            <img class="imagenPP" src="img/breaking bad.jpeg" alt="Top Gun"> <br><br>
+            <div class="info">
+                <p class = 'titulo'> Breaking Bad</p>
+                <p class = 'anio'>20-01-2008</p>
+            </div> 
+    </article> 
+</a>
+
+<a href="./detail_movie.html"> 
+    <article class = "serie">  
+            <img class="imagenPP" src="img/friends.jpeg" alt="Top Gun"> <br><br>
+            <div class="info">
+                <p class = 'titulo'> Breaking Bad</p>
+                <p class = 'anio'>22-09-1994</p>
+            </div> 
+    </article> 
+</a>
+</ul>
+</section>
+
+<div class="'palabra">
+    <h2 class="'tipodepalabra"> Peliculas Animadas </h2>
+</div>
+
+
+<section class = "peliculas_animadas">
+<ul class="listas">
+    <a href="./detail_movie.html">    
+        <article class = "animada">
+            <img class="imagenPP" src="img/coco.jpeg" alt="Top Gun"> <br><br>
+            <div class="info">
+                <p class = 'titulo'> Coco</p>
+                <p class = 'anio'>22-11-2017</p>
+            </div> 
+        </article> 
+    </a>
+            
+    <a href="./detail_movie.html"> 
+        <article class = "animada">  
+            <img class="imagenPP" src="img/intensamente.jpeg" alt="Top Gun"> <br><br>
+            <div class="info">
+                <p class = 'titulo'> Coco</p>
+                <p class = 'anio'>19-05-2005</p>
+            </div> 
+        </article>
+    </a> 
+   
+    <a href="./detail_movie.html">
+        <article class = "animada">   
+            <img class="imagenPP" src="img/zoo.jpeg" alt="Top Gun"> <br><br>
+            <div class="info">
+                <p class = 'titulo'> Zootopia</p>
+                <p class = 'anio'>17-03-2016</p>
+            </div> 
+        </article> 
+    </a>
+
+    <a href="./detail_movie.html"> 
+        <article class = "animada">  
+            <img class="imagenPP" src="img/toy story.jpeg" alt="Top Gun"> <br><br>
+            <div class="info">
+                <p class = 'titulo'> Toy Story 4</p>
+                <p class = 'anio'>21-06-2019</p>
+            </div> 
+        </article>
+    </a> 
+
+    <a href="./detail_movie.html"> 
+        <article class = "serie">  
+            <img class="imagenPP" src="img/mivillanofav.jpeg" alt="Top Gun"> <br><br>
+            <div class="info">
+                <p class = 'titulo'> Mi Villano Favorito 2</p>
+                <p class = 'anio'>04-07-2013</p>
+            </div> 
+        </article>
+    </a> 
+</ul>
+</section>
+
+
+
+<foote class="'footer">
+    <p class="iconosindex"> <i class="fa-brands fa-twitter"></i>  <i class="fa-brands fa-square-facebook"></i> <i class="fa-brands fa-spotify"> </i> <i class="fa-brands fa-apple"></i> <i class="fa-brands fa-amazon"></i> <i class="fa-brands fa-instagram"></i></p>
+    <br>
+    <br>
+    <p>© 2001-2022 PlayMovie, Inc (d78383-c92736)</p>
 </footer>
 
 </body>
