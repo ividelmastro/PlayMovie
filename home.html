@@ -15,118 +15,197 @@
 
 <header>
 
-    <div>
-        <img src="./img/3.png" alt="logo">
-        <nav>
+    <nav>
+        <div class = "navegacion">
+            <div class = "logo">
+                <img src="./img/3.png" alt="logo">
+            </div>
+        
             <ul class = "menu">
-                <li> <a href=""> | PELÍCULAS POPULARES | </a> </li>
-                <li> <a href=""> SERIES POPULARES | </a> </li>
-                <li><a href=""> 5 MÁS POPULARES EN ARGENTINA HOY | </a></li>
+                <li> <a href=""> | GÉNEROS | </a> </li>
+                <li> <a href="favoritos.html">FAVORITOS |</a></li>
             </ul>
-        </nav>
-
-    </div>
+        </div>
+        <form class = "busqueda" action="./search-results.html" method= "get"> 
+            <input class = "buscar" type= text name = "Buscar" placeholder="Search" value = " ">
+            <button class = "boton_search" type = "submit"> Buscar </button>
+        </form>
+    
+    </nav>
 
 </header>
     
-<main> 
     <video autoplay muted loop class="trailer">
         <source src="./img/trailer.mp4" type="video/mp4">
     </video>
 
-    
-    <section class="peliculas_populares">
-        <h2>PELÍCULAS POPULARES </h2>
-        <article class="pelicula">
-            <img src="./img/avengers.jpg" alt="">
-            <h2>Avengers: Infinity War</h2>
-            <a class="more" href="">Ver más</a>
-        </article>
-        <article class="pelicula">
-            <img src="./img/joker.jpeg" alt="">
-            <h2>El Guasón</h2>
-            <a class="more" href="">Ver más</a>
-        </article>
-        <article class="pelicula">
-            <img src="./img/cuandoteencuentre.jpeg" alt="">
-            <h2>Cuando te encuentre</h2>
-            <a class="more" href="">Ver más</a>
-        </article>
-        <article class="pelicula">
-            <img src="./img/titanic.jpeg" alt="">
-            <h2>Titanic</h2>
-            <a class="more" href="">Ver más</a>
-        </article>
-        <article class="pelicula">
-            <img src="./img/minions.jpeg" alt="">
-            <h2>Minions</h2>
-            <a class="more" href="">Ver más</a>
-        </article>
-     
-    </section>
-
-    <section class="series_populares">
-        <h2>SERIES POPULARES </h2>
-        <article class="serie">
-            <img src="./img/breakingbad.jpg" alt="">
-            <h2>Breaking Bad</h2>
-            <a class="more" href="">Ver más</a>
-        </article>
-        <article class="serie">
-            <img src="./img/peaky.jpg" alt="">
-            <h2>Peaky Blinders</h2>
-            <a class="more" href="">Ver más</a>
-        </article>
-        <article class="serie">
-            <img src="./img/gossip.jpeg" alt="">
-            <h2>Gossip Girl</h2>
-            <a class="more" href="">Ver más</a>
-        </article>
-        <article class="serie">
-            <img src="./img/thecrown.webp" alt="">
-            <h2>The Crown</h2>
-            <a class="more" href="">Ver más</a>
-        </article>
-        <article class="serie">
-            <img src="./img/juegodetronos.jpeg" alt="">
-            <h2>Juego de Tronos</h2>
-            <a class="more" href="">Ver más</a>
-        </article>
-     
-    </section>
-
-    <section class="top5">
-        <h2>5 MÁS POPULARES EN ARGENTINA HOY </h2>
-        <article class="top5">
-            <img src="./img/thecrown.webp" alt="">
-            <h2>The Crown</h2>
-            <a class="more" href="">Ver más</a>
-        </article>
-        <article class="top5">
-            <img src="./img/topgun.jpeg" alt="">
-            <h2>Top Gun</h2>
-            <a class="more" href="">Ver más</a>
-        </article>
-        <article class="top5">
-            <img src="./img/after.jpeg" alt="">
-            <h2>After: Almas perdidas </h2>
-            <a class="more" href="">Ver más</a>
-        </article>
-        <article class="top5">
-            <img src="./img/joker.jpeg" alt="">
-            <h2>El Guasón</h2>
-            <a class="more" href="">Ver más</a>
-        </article>
-        <article class="top5">
-            <img src="./img/rubias.jpg" alt="">
-            <h2>¿Y dónde están las rubias?</h2>
-            <a class="more" href="">Ver más</a>
-        </article>
-     
-    </section>
+<div class = "primer_apartado">
+    <h2 class = "titulo">Peliculas Populares</h2>
 
 
-</main>
+<section class = "peliculas_populares">
+    <article class = "pelicula">  
+        <a href="./detail_movie.html"> 
+            <img src="img/topgun.webp" alt="Top Gun"> <br><br>
+            <div class="info">
+                <h3>Top Gun</h3>
+                <h4>27-05-2022</h4>
+            </div> 
+        </a>
+    </article> 
+            
+    <article class = "pelicula">  
+        <a href="./detail_movie.html"> 
+            <img src="img/avatar.jpeg" alt="Top Gun"> <br><br>
+            <div class="info">
+                <h3>Avatar</h3>
+                <h4>01-01-2010</h4>
+            </div> 
+        </a>
+    </article> 
+   
+    <article class = "pelicula">  
+        <a href="./detail_movie.html"> 
+            <img src="img/bajolamismaestrella.jpeg" alt="Top Gun"> <br><br>
+            <div class="info">
+                <h3>Bajo la misma estrella</h3>
+                <h4>26-06-2014</h4>
+            </div> 
+        </a>
+    </article> 
+
+    <article class = "pelicula">  
+        <a href="./detail_movie.html"> 
+            <img src="img/avengers.jpeg" alt="Top Gun"> <br><br>
+            <div class="info">
+                <h3>Avengers: Inifnity War</h3>
+                <h4>26-04-2018</h4>
+            </div> 
+        </a>
+    </article> 
+
+    <article class = "pelicula">  
+        <a href="./detail_movie.html"> 
+            <img src="img/soncomoniños.jpeg" alt="Top Gun"> <br><br>
+            <div class="info">
+                <h3>Son como niños</h3>
+                <h4>22-07-2010</h4>
+            </div> 
+        </a>
+    </article> 
+
+
+</section>
+
+<section class = "series_populares">
+    <article class = "serie">  
+        <a href="./detail_movie.html"> 
+            <img src="img/thecrown.jpeg" alt="Top Gun"> <br><br>
+            <div class="info">
+                <h3>The Crown</h3>
+                <h4>04-11-2016</h4>
+            </div> 
+        </a>
+    </article> 
+            
+    <article class = "serie">  
+        <a href="./detail_movie.html"> 
+            <img src="img/scandal.jpeg" alt="Top Gun"> <br><br>
+            <div class="info">
+                <h3>Scandal</h3>
+                <h4>05-04-2012</h4>
+            </div> 
+        </a>
+    </article> 
+   
+    <article class = "serie">  
+        <a href="./detail_movie.html"> 
+            <img src="img/gossip.webp" alt="Top Gun"> <br><br>
+            <div class="info">
+                <h3>Gossip Girl</h3>
+                <h4>19-09-2007</h4>
+            </div> 
+        </a>
+    </article> 
+
+    <article class = "serie">  
+        <a href="./detail_movie.html"> 
+            <img src="img/breaking bad.jpeg" alt="Top Gun"> <br><br>
+            <div class="info">
+                <h3>Breaking Bad</h3>
+                <h4>20-01-2008</h4>
+            </div> 
+        </a>
+    </article> 
+
+    <article class = "serie">  
+        <a href="./detail_movie.html"> 
+            <img src="img/friends.jpeg" alt="Top Gun"> <br><br>
+            <div class="info">
+                <h3>Friends</h3>
+                <h4>22-09-1994</h4>
+            </div> 
+        </a>
+    </article> 
+
+
+</section>
+
+<section class = "peliculas_animadas">
+    <article class = "animada">  
+        <a href="./detail_movie.html"> 
+            <img src="img/coco.jpeg" alt="Top Gun"> <br><br>
+            <div class="info">
+                <h3>Coco</h3>
+                <h4>22-11-2017</h4>
+            </div> 
+        </a>
+    </article> 
+            
+    <article class = "animada">  
+        <a href="./detail_movie.html"> 
+            <img src="img/intensamente.jpeg" alt="Top Gun"> <br><br>
+            <div class="info">
+                <h3>Intensamente</h3>
+                <h4>19-05-2015</h4>
+            </div> 
+        </a>
+    </article> 
+   
+    <article class = "animada">  
+        <a href="./detail_movie.html"> 
+            <img src="img/zoo.jpeg" alt="Top Gun"> <br><br>
+            <div class="info">
+                <h3>Zootopia</h3>
+                <h4>17-03-2016</h4>
+            </div> 
+        </a>
+    </article> 
+
+    <article class = "animada">  
+        <a href="./detail_movie.html"> 
+            <img src="img/toy story.jpeg" alt="Top Gun"> <br><br>
+            <div class="info">
+                <h3>Toy Story 4</h3>
+                <h4>21-06-2019</h4>
+            </div> 
+        </a>
+    </article> 
+
+    <article class = "serie">  
+        <a href="./detail_movie.html"> 
+            <img src="img/mivillanofav.jpeg" alt="Top Gun"> <br><br>
+            <div class="info">
+                <h3>Mi Villano Favorito 2</h3>
+                <h4>04-07-2013</h4>
+            </div> 
+        </a>
+    </article> 
+
+</section>
+
+</div>
+
 
 <footer>
     <div class="footer">
