@@ -58,6 +58,7 @@
     width: 100px;
 
 }
+
 .trailer {
     width: 100%;
     position: relative;
@@ -83,12 +84,46 @@
 
 .pelicula {
 
-  width: 20%;
+  width: 100%;
   justify-content: space-between;
   height: 50%;
 
 
 }
+
+.series_populares {
+    display: inline-flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.serie {
+    width: 20%;
+    justify-content: space-between;
+    height: 50%;
+
+}
+
+.peliculas_infantiles {
+    display: inline-flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.animada {
+    width: 20%;
+    justify-content: space-between;
+    height: 50%;
+}
+
+
+
+
+
 
 .fototg{
     width: 800px;
