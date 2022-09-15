@@ -21,6 +21,8 @@
 .barranav {
     display: flex;
     justify-content: left;
+    align-items: center;
+    margin-left: 10px;
     
 }
 
@@ -35,19 +37,19 @@
 }
 
 .barranav a:hover {
-    background-color: black;
-    color: aliceblue;
+    background-color: #fff;
+    color: black;
 }
 
+.busqueda {
+    align-items: right;
+}
 .bottonsearch{
-
- 
     height: 40px;
     width: 18vh;
     background-color: white;
     color: white;
     text-align: right;
-
 }
 
 .search{
@@ -58,19 +60,46 @@
 
 }
 
+
+.texto-encima {
+    position: absolute;
+    top: 48px;
+    color: #fff;
+    font-size: 30px;
+    margin-top: 620px;
+}
+
+.texto-encima .thecrown {
+    background-color: rgba(0, 0, 0, 0.434);
+}
+
+.texto-encima .thecrown_descripcion {
+    background-color: rgba(0, 0, 0, 0.434);
+}
+
+
 .trailer {
     width: 100%;
     position: relative;
     display: inline-block;
     text-align: center;
-       
 }
-.texto-encima{
-    position: absolute;
-    top: 48px;
-    color: white;
-    background-color: black;
-    font-size: xx-large;
+
+.principal .boton {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 5px;
+    padding: 15px 30px;
+    color: #fff;
+    margin-right: 20px;
+    position: center;
+
+
+}
+
+.principal .boton:hover {
+    background-color: #fff;
+    color: black;
 
 }
 
