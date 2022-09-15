@@ -14,36 +14,41 @@
 <body>
 
 
+<header>
 
-<nav class="nav1">
-    <div class="logoynav">
-        <a  href="./home.html">
-            <img class="logo" src="./img/3.png" alt="logo" >
-        </a>
-        <div class="nav2">
-            <ul class="nav3">
-                <li class="item uno " >
-                    <a class="nave" href="./genres.html"> |  Géneros |</a>
-                </li>
-                <li class="item dos">
-                    <a class="nave" href="./favorites.html">  Favoritos  </a> 
-                </li>
-                    </a>
-            </ul>
+    <section class="header">
+
+        <article class="logo">
+            <a  href="./home.html">
+                <img src="./img/logo.png" alt="logo">
+            </a>
+        </article>
+        
+        <div class="barranav">
+            <a href="home.html"> HOME </a>
+            <a href="genres.html"> GÉNEROS </a>
+            <a href="favoritos.html"> FAVORITOS </a>
+            
         </div>
-    </div>
-    <form class="busqueda" action="./search-results.html" method="get">
-        <input class="search" type="text" name="Search" placeholder="Search" value=""> 
-        <button class="bottonsearch" type="submit">Buscar</button>    
-    </form>
-</nav>
+        <form class="busqueda" action="./search-results.html" method="get">
+            <input class="search" type="text" name="Search" placeholder="Search" value=""> 
+            <button class="bottonsearch" type="submit">Buscar</button>    
+        </form>
+    </section>
 
-<video autoplay muted loop class="trailer">
-        <source src="./img/trailer.mp4" type="video/mp4">
+</header>
+
+<main>
+
+<div class="trailer">
+    <video autoplay muted loop class="trailer">
+    <source src="./img/trailer.mp4" type="video/mp4">
     </video>
+    <div class="texto-encima">Lo más visto en Argentina hoy</div>
+</div>
 
 <div class = "primer_apartado"> 
-    <h2 class = 'tipodepalabra'>Peliculas Populares</h2>
+    <h2 class ='tipodepalabra'>Peliculas Populares</h2>
     </div>
 
 
@@ -225,7 +230,7 @@
 </ul>
 </section>
 
-
+</main>
 
 <footer class="'footer">
     <p class="iconosindex"> <i class="fa-brands fa-twitter"></i>  <i class="fa-brands fa-square-facebook"></i> <i class="fa-brands fa-spotify"> </i> <i class="fa-brands fa-apple"></i> <i class="fa-brands fa-amazon"></i> <i class="fa-brands fa-instagram"></i></p>
