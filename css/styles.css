@@ -1,12 +1,14 @@
 *{
     box-sizing: border-box;
-    background-color: black;  
+    background-color: black;
 }
+
+
 
 .header {
     display: flex;
     flex-direction: row;
-    background-color: rgb(21, 21, 92);
+    background-image: url(../img/galaxy.jpeg) ;
     
 }
 
@@ -17,10 +19,9 @@
 }
 
 .barranav {
-    overflow: hidden;
-    background-color: white;
     display: flex;
-    justify-content: right;
+    background-color: white;
+    justify-content: center;
     border-radius: 15px;
     
 }
@@ -28,15 +29,15 @@
 .barranav a {
     float: left;
     color: white;
-    text-align: center;
+    text-align: right;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 20px;
-    justify-content: center ;
+    justify-content: space-around ;
 }
 
 .barranav a:hover {
-    background-color: white;
+    background-color: black;
     color: aliceblue;
 }
 
@@ -113,6 +114,13 @@
     border-radius: 15px;
 }
 
+.imagenPP:hover {
+    width: 500px;
+    height: 300px;
+}
+
+
+
 .titulo {
     color: white;
     font-size: 20px;
@@ -136,6 +144,11 @@
   height: 340px;
   margin-left: 30px;
 }
+
+.hipervinculo {
+    text-decoration: none;
+}
+
 
 
 .fototg{
