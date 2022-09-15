@@ -70,7 +70,30 @@
     position: absolute;
     top: 48px;
     color: white;
+    background-color: black;
     font-size: xx-large;
+
+}
+
+.titulo_PP{
+    position:relative;
+    top: 48px;
+    color: white;
+    font-size: large;
+}
+
+.titulo_SP{
+    position:relative;
+    top: 48px;
+    color: white;
+    font-size: large;
+}
+
+.titulo_PI{
+    position:relative;
+    top: 48px;
+    color: white;
+    font-size: large;
 }
 
 .peliculas_populares {
@@ -114,15 +137,11 @@
     width: 100%;
 }
 
-.animada {
+.infantiles {
     width: 20%;
     justify-content: space-between;
     height: 50%;
 }
-
-
-
-
 
 
 .fototg{
@@ -148,10 +167,34 @@
 }
 
 
-
-
 .estrella{
     width: 250px;
     padding: 2px;
 }
+
+
+.imagenPP{
+    width: 500px;
+    height: 45vh;
+    margin-top: 1%;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-bottom: 1%;
+    border-radius: 15px;
+}
+
+.titulo{
+    position:relative;
+    top: 48px;
+    color: white;
+    font-size: large;
+}
+
+.anio{
+    position:relative;
+    top: 48px;
+    color: white;
+    font-size: large;
+}
+
 
