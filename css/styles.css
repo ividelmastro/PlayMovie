@@ -76,42 +76,18 @@
     display: inline-flex;
     flex-wrap: nowrap;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     width: 100%;
    
-
 }
 
 .pelicula {
-  background-color: rgb(20, 20, 96);
-}
+
+  width: 20%;
+  justify-content: space-between;
+  height: 50%;
 
 
-
-
-
-.generos{
-    background-color: aquamarine;
-    color: azure;
-    width: 180px;
-    height: 50px;
-    border-radius: 9px;
-    text-align: center;
-    padding: 20px;
-    margin: 20px;
-}
-
-.listas{
-    display: flex; 
-    flex-wrap: wrap;
-    flex-direction: row; 
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    position: relative;
-    border: 3px;
-    overflow: hidden;
-    
 }
 
 .fototg{
@@ -125,6 +101,18 @@
 
     
 }
+.generos{
+    background-color: aquamarine;
+    color: azure;
+    width: 180px;
+    height: 50px;
+    border-radius: 9px;
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+}
+
+
 
 
 .estrella{
