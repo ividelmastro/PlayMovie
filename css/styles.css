@@ -10,6 +10,7 @@
 .header {
     display: flex;
     flex-direction: row;
+    background-color: rgb(21, 21, 92);
     
 }
 
@@ -71,36 +72,23 @@
     font-size: xx-large;
 }
 
-
-.listasnave {
-    
-}
-
-.imagenPP{
-    display: flex;
+.peliculas_populares {
+    display: inline-flex;
+    flex-wrap: nowrap;
     flex-direction: row;
-    width: 800px;
-    height: 55vh;
-    margin-top: 1%;
-    margin-left: 3%;
-    margin-right: 3%;
-    margin-bottom: 1%;
-    border-radius: 15px;
+    justify-content: space-evenly;
+    width: 100%;
+   
 
+}
+
+.pelicula {
+  background-color: rgb(20, 20, 96);
 }
 
 
 
 
-.info{
-    font-size: 20px;
-    color:blueviolet;
-}
-
-.info2{
-    font-size: 20px;
-    color: red;
-}
 
 .generos{
     background-color: aquamarine;
