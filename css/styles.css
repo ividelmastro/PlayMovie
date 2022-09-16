@@ -7,17 +7,27 @@ body {
     font-family: 'Open Sans', sans-serif;;
 }
 
+footer {
+    color: rgb(155, 154, 154);
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    
+    
+}
+
+footer .iconosindex {
+    font-size: 15px;
+    margin-top: 100px;
+}
+
+
 .header {
     display: flex;
     flex-direction: row;
     background-image: url(../img/galaxy.jpeg) ;
+    justify-content: space-between;
     
-}
-
-.logo{
-    display: flex;
-    justify-content: left;
-    height: 100px;
 }
 
 .barranav {
@@ -48,10 +58,10 @@ body {
 }
 .bottonsearch{
     height: 40px;
-    width: 18vh;
-    background-color: white;
+    width: 90px;
+    background-color: black;
     color: white;
-    text-align: right;
+    text-align: center;
 }
 
 .search{
@@ -295,16 +305,18 @@ body {
 }
 
 .lista_cast {
-    display: inline-block;
-
+    display: flex;
+    flex-direction: row;
 }
 
-.foto_tg {
-    width: 600px;
-    height: 800px;
+.foto_tg img{
+    width: 500px;
+    height: 380px;    
+    
 }
 
 .lista_tg {
     align-items: right;
+
 }
 
