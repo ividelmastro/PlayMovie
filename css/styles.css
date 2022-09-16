@@ -14,11 +14,13 @@ footer {
     text-align: center;
     
     
+    
 }
 
 footer .iconosindex {
     font-size: 15px;
     margin-top: 100px;
+    position: relative;
 }
 
 
@@ -32,7 +34,6 @@ footer .iconosindex {
 
 .barranav {
     display: flex;
-    justify-content: left;
     align-items: center;
     margin-left: 10px;
 
@@ -52,15 +53,11 @@ footer .iconosindex {
     font-size: 20px;
     justify-content: space-around ;
 }
-
 .barranav a:hover {
     background-color: #fff;
     color: black;
 }
 
-.busqueda {
-    align-items: right;
-}
 .bottonsearch{
     height: 40px;
     width: 90px;
@@ -84,14 +81,6 @@ footer .iconosindex {
     font-size: 30px;
 }
 
-.texto-encima .thecrown {
-    background-color: rgba(0, 0, 0, 0.434);
-}
-
-.texto-encima .thecrown_descripcion {
-    background-color: rgba(0, 0, 0, 0.434);
-}
-
 
 .trailer {
     width: 100%;
@@ -101,7 +90,7 @@ footer .iconosindex {
 }
 
 .principal .boton {
-    background-color: rgba(0, 0, 0, 0.5);
+
     border: solid 3px white;
     border-radius: 5px;
     padding: 15px 30px;
@@ -128,6 +117,7 @@ footer .iconosindex {
 
 .peliculas_populares {
     display: flex;
+    justify-content: row;
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
     
@@ -175,6 +165,14 @@ footer .iconosindex {
     text-decoration: none;
     
 }
+.estreno{
+    color: white;
+    font-size: 20px;
+    margin: 10px;
+    text-align: center;
+    text-decoration: none;
+
+}
 
 .serie {
     width: 450px;
@@ -208,22 +206,9 @@ footer .iconosindex {
 
     
 }
-.generos{
-    background-color: aquamarine;
-    color: azure;
-    width: 180px;
-    height: 50px;
-    border-radius: 9px;
-    text-align: center;
-    padding: 20px;
-    margin: 20px;
-}
 
 
-.estrella{
-    width: 250px;
-    padding: 2px;
-}
+
 
 .infopelicula{
     color: aliceblue;
@@ -241,7 +226,6 @@ footer .iconosindex {
 
 }
  
-
 
 .titulocomedia{
     color: aliceblue;
@@ -300,6 +284,9 @@ footer .iconosindex {
 .contenedor_detail {
     display: flex;
     flex-direction: row;
+    margin-left: 1%;
+    margin-right: 10px;
+    font-size: 17px;
 }
 
 .item {
@@ -344,7 +331,6 @@ footer .iconosindex {
 .cajapadre {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
     justify-content: space-around;
     align-items: center;
     margin-top: 5%;
@@ -409,3 +395,4 @@ footer .iconosindex {
    
     
 }
+
