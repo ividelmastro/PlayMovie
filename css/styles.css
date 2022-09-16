@@ -39,7 +39,7 @@ footer .iconosindex {
 }
 
 .barranav a {
-    float: left;
+    
     color: white;
     text-align: right;
     padding: 14px 16px;
@@ -74,11 +74,9 @@ footer .iconosindex {
 
 
 .texto-encima {
-    position: absolute;
-    top: 48px;
+    position: relative;
     color: #fff;
     font-size: 30px;
-    margin-top: 620px;
 }
 
 .texto-encima .thecrown {
@@ -245,12 +243,9 @@ footer .iconosindex {
 }
 
 .texto-encima2 {
-    position: absolute;
-    top: 48px;
+    position: relative;
     color: #fff;
-    font-size: 23px;
-    margin-top: 620px;
-    text-align: justify;
+    font-size: 30px;
     
 }
 
@@ -320,3 +315,8 @@ footer .iconosindex {
 
 }
 
+@media (max-width: 768px) {
+    .barranav{
+        display: none;
+    }
+}
