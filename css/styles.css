@@ -3,7 +3,9 @@
     background-color: black;
 }
 
-
+body {
+    font-family: 'Open Sans', sans-serif;;
+}
 
 .header {
     display: flex;
@@ -231,3 +233,78 @@
 .titulocomedia{
     color: aliceblue;
 }
+
+.texto-encima2 {
+    position: absolute;
+    top: 48px;
+    color: #fff;
+    font-size: 23px;
+    margin-top: 620px;
+    text-align: justify;
+    
+}
+
+.texto-encima2 .topgun {
+    background-color: rgba(0, 0, 0, 0.434);
+
+}
+
+.texto-encima .topgun_descripcion {
+    background-color: rgba(0, 0, 0, 0.434);
+   
+}
+
+.principal .boton2 {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 5px;
+    padding: 15px 30px;
+    color: #fff;
+    margin-right: 20px;
+    position: center;
+    margin-top: 30px;
+}
+
+.principal .boton2:hover {
+    background-color: #fff;
+    color: black;
+
+}
+
+.estrellas {
+    color: rgb(233, 224, 49);
+    font-size: 21px;
+    margin-left: 5px;
+   
+}
+
+.verde {
+    color: rgb(16, 171, 16);
+    margin-left: 5px;
+}
+
+.contenedor_detail {
+    display: flex;
+    flex-direction: row;
+}
+
+.item {
+    margin-left: 5px;
+    margin-right: 10px;
+    font-size: 17px;
+}
+
+.lista_cast {
+    display: inline-block;
+
+}
+
+.foto_tg {
+    width: 600px;
+    height: 800px;
+}
+
+.lista_tg {
+    align-items: right;
+}
+
