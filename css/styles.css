@@ -35,7 +35,12 @@ footer .iconosindex {
     justify-content: left;
     align-items: center;
     margin-left: 10px;
+
     
+}
+
+.cuadrado {
+    display: none;
 }
 
 .barranav a {
@@ -245,17 +250,21 @@ footer .iconosindex {
 .texto-encima2 {
     position: relative;
     color: #fff;
-    font-size: 30px;
     
 }
 
 .texto-encima2 .topgun {
     background-color: rgba(0, 0, 0, 0.434);
+    font-size: 40px;
+    margin: 1%;
 
 }
 
-.texto-encima .topgun_descripcion {
+.texto-encima2 .topgun_descripcion {
     background-color: rgba(0, 0, 0, 0.434);
+    font-size: 20px;
+    text-align:justify;
+    margin: 1%;
    
 }
 
@@ -279,13 +288,13 @@ footer .iconosindex {
 .estrellas {
     color: rgb(233, 224, 49);
     font-size: 21px;
-    margin-left: 5px;
+    margin: 1%;
    
 }
 
 .verde {
     color: rgb(16, 171, 16);
-    margin-left: 5px;
+    margin: 1%;
 }
 
 .contenedor_detail {
@@ -294,7 +303,7 @@ footer .iconosindex {
 }
 
 .item {
-    margin-left: 5px;
+    margin-left: 1%;
     margin-right: 10px;
     font-size: 17px;
 }
@@ -305,18 +314,60 @@ footer .iconosindex {
 }
 
 .foto_tg img{
-    width: 500px;
-    height: 380px;    
+    width: 600px;
+    height: 380px;
+    margin: 20%;
+    margin-left: 30%;
+ 
     
 }
 
 .lista_tg {
-    align-items: right;
+    margin-left: 15%;
+    margin-top: 10%;
+    list-style: none;
 
 }
+
+.lista_tg .titulo_lista {
+    font-weight: bold;
+    font-size: 20px;
+    margin: 17px;
+    list-style: none;
+}
+
+.lista_tg .subtitulo_lista {
+    font-weight: normal;
+    font-size: 14px;
+}
+
+
+
 
 @media (max-width: 768px) {
     .barranav{
         display: none;
     }
+
+    .cuadrado {
+        display: block;
+        color: #fff;
+        font-size: 25px;
+        margin-left: 200px;
+    }
+
+    .bottonsearch {
+        display: none;
+    }
+
+    .search {
+        display: none;
+    }
+
+    .texto-encima .thecrown_descripcion {
+        font-size: 20px;
+        text-align:justify;
+    }
+   
+    
 }
