@@ -91,6 +91,8 @@ footer {
     color: #fff;
     margin-right: 20px;
     position: center;
+    margin-top: 1%;
+    margin-left: 1%;
 
 
 }
@@ -108,6 +110,17 @@ footer {
     font-size: 20px;
 }
 
+.texto-encima_thecrown {
+    color: #fff;
+    font-size: 30px;
+    margin-left: 1%;
+}
+.texto-encima_thecrown_descripcion {
+    color: #fff;
+    font-size: 20px;
+    text-align:justify;
+    margin: 1%;
+}
 
 .peliculas_populares {
     display: flex;
