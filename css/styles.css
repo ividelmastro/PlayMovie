@@ -305,6 +305,7 @@ footer {
 }
 
 .foto_tg img{
+    display:block;
     width: 600px;
     height: 380px;
     margin: 20%;
@@ -345,6 +346,7 @@ footer {
 }
 
 .cajahijo {
+    
     margin: 2%;
 }
 .cajahijo a {  
@@ -386,7 +388,11 @@ footer {
         margin-left: 200px;
     }
 
+
     .bottonsearch {
+        display: none;
+    }
+    .busqueda{
         display: none;
     }
 
@@ -399,6 +405,41 @@ footer {
         text-align:justify;
     }
    
+    .cajahijo{
+        margin: -1%;
+       
+    }
+    .footer{
+        margin-top: 8%;
+        margin-bottom: 50%;
+        text-align:center;
+        
+        
+    }
+
+    .foto_tg{
+        width: 350px;
+        height: 210px;
+        margin-left: -10%;
+        margin-top: -2%;
+        
+    }
+    .titulo_lista{
+        display: none;
+    }
+
+    .subtitulo_lista{
+        display: none;
+    }
+
     
+   
+
+
+
+
+
+
 }
+
 
