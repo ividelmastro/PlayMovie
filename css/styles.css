@@ -120,28 +120,31 @@ footer {
     color: #fff;
     font-size: 20px;
     text-align:justify;
-    margin: 1%;
+    margin: 1%; 
 }
 
 .peliculas_populares {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
-    
-    scroll-snap-type: x mandatory;
+    scroll-snap-type: x ;
     overflow-x: scroll;
     
 }
 
 .series_populares {
     display: flex;
-    scroll-snap-type: x mandatory;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    scroll-snap-type: x ;
     overflow-x: scroll;
 }
 
 .peliculas_infantiles {
     display: flex;
-    scroll-snap-type: x mandatory;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    scroll-snap-type: x ;
     overflow-x: scroll;
 }
 
