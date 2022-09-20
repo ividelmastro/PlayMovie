@@ -125,7 +125,9 @@ footer {
 
 .peliculas_populares {
     display: flex;
+    flex-wrap: nowrap;
     flex-direction: row;
+    
     scroll-snap-type: x mandatory;
     overflow-x: scroll;
     
