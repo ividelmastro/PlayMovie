@@ -70,13 +70,6 @@ footer {
 }
 
 
-.texto-encima {
-    position: relative;
-    color: #fff;
-    font-size: 30px;
-}
-
-
 .trailer {
     width: 100%;
     position: relative;
@@ -191,8 +184,6 @@ footer {
 }
 
 
-
-
 .infantiles {
     width: 450px;
   height: 340px;
@@ -238,21 +229,16 @@ footer {
     color: aliceblue;
 }
 
+
 .texto-encima2 {
-    position: relative;
     color: #fff;
+    font-size: 30px;
+    margin-left: 1%;
+}
     
-}
-
-.texto-encima2 .topgun {
-    background-color: rgba(0, 0, 0, 0.434);
-    font-size: 40px;
-    margin: 1%;
-
-}
 
 .texto-encima2 .topgun_descripcion {
-    background-color: rgba(0, 0, 0, 0.434);
+    color: #fff;
     font-size: 20px;
     text-align:justify;
     margin: 1%;
