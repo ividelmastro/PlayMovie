@@ -1,34 +1,92 @@
 //FALTA LO DEL BUSCADOR
+///api key: 400f43d154bc968e0f7c02f3b9187c48
 
 //PELICULAS POPULARES
 
-let section = document.querySelector('.peliculas');
-
-
-fetch ('https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/tracks')
-   .then (function(datos) {
-   return datos.json();
+fetch ('https://api.themoviedb.org/3/movie/popular?api_key=400f43d154bc968e0f7c02f3b9187c48&language=en-US&page=1') 
+  .then (function(response) {
+  return response.json();
 
 }) 
-   .then(function(info){
-      console.log (info)
 
-         let section2 = ''
-         for (let i = 0; i < 5; i++){ 
+  .then(function(data){
+    console.log (data)
+    let lista = document.querySelector(".peliculas_populares")
+    let elementoslista= ""
 
-       section2 += ` <article class="cajas-canciones">
-        <img src=${info.data[i].artist.picture} alt="" class="imagenC bohemian"> 
-        <br> <br>
-        <a 
-          href="./detail-track.html?id=${info.data[i].id}"
-          class="linkcancion"> ${info.data[i].title}
-        </a>
-        </article> `
-        }
+    for (let i = 0; i < data.results.length; i++) {
+      elementoslista += `<article class = "pelicula">
+                          <a class = "hipervinculo" href="./detail_movie.html"> 
+                            <img class ="imagenPP" src= ${data.results[i].poster_path} alt=''/>
+                            <p class= "titulo"> ${data.results[i].title} </p>
+                            <p class ="estreno"> Estreno: ${data.results[i].release_date}</p>
+                          <a/>
+                          </article>`
+      }
+      console.log(elementoslista);
+      lista.innerHTML = elementoslista; 
+     
+})
+//${data.results[i].image} 
 
-section.innerHTML = section2; 
+.catch(function(error){
+  console.log ('el error fue: ' + error);
+})
 
+//SERIES POPULARES
+fetch ('https://api.themoviedb.org/3/tv/popular?api_key=400f43d154bc968e0f7c02f3b9187c48&language=en-US&page=1') 
+  .then (function(response) {
+  return response.json();
 
+}) 
+
+  .then(function(data){
+    console.log (data)
+    let lista = document.querySelector(".series_populares")
+    let elementoslista= ""
+
+    for (let i = 0; i < data.results.length; i++) {
+      elementoslista += `<article class = "serie">
+                          <a class = "hipervinculo" href="./detail_movie.html"> 
+                            <img class ="imagenPP" src= ${data.results[i].poster_path} alt=''/>
+                            <p class= "titulo"> ${data.results[i].name} </p>
+                            <p class ="estreno"> Estreno: ${data.results[i].first_air_date}</p>
+                          <a/>
+                          </article>`
+      }
+      console.log(elementoslista);
+      lista.innerHTML = elementoslista; 
+     
+})
+
+.catch(function(error){
+  console.log ('el error fue: ' + error);
+})
+
+//NUEVOS LANZAMIENTOS
+fetch ('https://api.themoviedb.org/3/movie/top_rated?api_key=400f43d154bc968e0f7c02f3b9187c48&language=en-US&page=1') 
+  .then (function(response) {
+  return response.json();
+
+}) 
+
+  .then(function(data){
+    console.log (data)
+    let lista = document.querySelector(".peliculas_infantiles")
+    let elementoslista= ""
+
+    for (let i = 0; i < data.results.length; i++) {
+      elementoslista += `<article class = "peliculas_lanzadas">
+                          <a class = "hipervinculo" href="./detail_movie.html"> 
+                            <img class ="imagenPP" src= ${data.results[i].poster_path} alt=''/>
+                            <p class= "titulo"> ${data.results[i].title} </p>
+                            <p class ="estreno"> Estreno: ${data.results[i].release_date}</p>
+                          <a/>
+                          </article>`
+      }
+      console.log(elementoslista);
+      lista.innerHTML = elementoslista; 
+     
 })
 
 .catch(function(error){
