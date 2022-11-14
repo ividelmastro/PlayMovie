@@ -17,7 +17,7 @@ fetch ('https://api.themoviedb.org/3/movie/popular?api_key=400f43d154bc968e0f7c0
     for (let i = 0; i < data.results.length; i++) {
       elementoslista += `<article class = "pelicula">
                           <a class = "hipervinculo" href="./detail-movie.html"> 
-                            <img class ="imagenPP" src= ${data.results[i].poster_path} alt=''/>
+                            <img class ="imagenPP" src= "https://image.tmdb.org/t/p/w500/${data.results[i].backdrop_path}" alt=''/>
                             <p class= "titulo"> ${data.results[i].title} </p>
                             <p class ="estreno"> Estreno: ${data.results[i].release_date}</p>
                           <a/>
@@ -47,7 +47,7 @@ fetch ('https://api.themoviedb.org/3/tv/popular?api_key=400f43d154bc968e0f7c02f3
     for (let i = 0; i < data.results.length; i++) {
       elementoslista += `<article class = "serie">
                           <a class = "hipervinculo" href="./detail-movie.html"> 
-                            <img class ="imagenPP" src= ${data.results[i].poster_path} alt=''/>
+                            <img class ="imagenPP" src= "https://image.tmdb.org/t/p/w500/${data.results[i].backdrop_path}" alt=''/>
                             <p class= "titulo"> ${data.results[i].name} </p>
                             <p class ="estreno"> Estreno: ${data.results[i].first_air_date}</p>
                           <a/>
@@ -77,7 +77,7 @@ fetch ('https://api.themoviedb.org/3/movie/top_rated?api_key=400f43d154bc968e0f7
     for (let i = 0; i < data.results.length; i++) {
       elementoslista += `<article class = "peliculas_lanzadas">
                           <a class = "hipervinculo" href="./detail-movie.html"> 
-                            <img class ="imagenPP" src= ${data.results[i].poster_path} alt=''/>
+                            <img class ="imagenPP" src= "https://image.tmdb.org/t/p/w500/${data.results[i].backdrop_path}" alt=''/>
                             <p class= "titulo"> ${data.results[i].title} </p>
                             <p class ="estreno"> Estreno: ${data.results[i].release_date}</p>
                           <a/>
