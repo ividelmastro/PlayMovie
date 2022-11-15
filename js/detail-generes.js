@@ -26,7 +26,7 @@ fetch(url)
         let info = data.results
 
         //capturo el DOM//
-        let lista = document.querySelector('.peliculas_populares')
+        let lista = document.querySelector('.d')
 
         //variable vacia para luego insertar los articulos//
         let elementosPeliculas = ''
