@@ -3,14 +3,14 @@
 
 
 //usar location.search para obtener y almacenar la query string
-let qs = location.search;
+let queryString = location.search;
 
 //transformar la qs en objeto literal
 
-let ol = new URLSearchParams(qs);
+let qsObject = new URLSearchParams(qs);
 
 //obtener valor de id de la query string//
-let id = ol.get('id_G_Movie');
+let id = queryString.get('id_G_Movie');
 
 //armar un fetch //
 let url = `https://api.themoviedb.org/3/genre/movie/list?api_key=400f43d154bc968e0f7c02f3b9187c48&language=en-US${id}`;
@@ -32,21 +32,22 @@ fetch(url)
         let elementosPeliculas = ''
 
         for (let i = 0; i < info.length; i++) {
-            if (info[i].id == null) {
+            if (info[i].poster_path == null) {
                 elementosPeliculas +=
-                    `<article class="peliculas">
-     <h4>${info[i].name}</h4>
-     <a href="./detailmovie.html?movie_id=${info[i].id}"> <img src="./img/noImage.png" alt="Portada">
-     </a></article>`
+                                    `<article class="peliculas">
+                                        <h4>${info[i].original_title}</h4>
+                                        <a href="./detail-movie.html?movie_id=${info[i].id}"> <img src="./img/imagen-no-disponible.jpeg" alt="Portada">
+                                        </a>   
+                                    </article>`
             } else {
                 elementosPeliculas +=
-                    `<article class="peliculas">
-             <h4>${info[i].name}</h4>
-             <a href="./detailmovie.html?movie_id=${info[i].id}"> <img src="https://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="Portada">
-             </a></article>`
+                                    `<article class="peliculas">
+                                        <h4>${info[i].original_title}</h4>
+                                        <a href="./detail-movie.html?movie_id=${info[i].id}"> <img src="https://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="Portada">
+                                        </a>
+                                    </article>`
             }
         }
-
         //modifico el DOM//
         lista.innerHTML = elementosPeliculas;
     })

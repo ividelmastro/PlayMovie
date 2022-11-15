@@ -18,8 +18,7 @@ console.log("error")
     else{
         this.submit()
     }
-}
-)
+})
 
 let queryString = location.search;
 let queryStringObj= new URLSearchParams(queryString);
