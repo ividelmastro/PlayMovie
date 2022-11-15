@@ -215,7 +215,7 @@ footer {
 }
     
 
-.texto-encima2 .topgun_descripcion {
+.texto-encima2 .pelicula_descripcion {
     color: #fff;
     font-size: 20px;
     text-align:justify;
@@ -267,7 +267,7 @@ footer {
     flex-direction: row;
 }
 
-.foto_tg img{
+.foto_pelicula img{
     display:block;
     width: 600px;
     height: 380px;
