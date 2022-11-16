@@ -30,8 +30,8 @@ fetch(url)
         
         // Agregar la información de la api y mostrarlo en el html
         titulo.innerText = data.original_title;
-        descripcion.innerText += data.results.overview;
-        img.src= data.results.backdrop_path;
+        descripcion.innerText = data.overview;
+        img.src= "https://image.tmdb.org/t/p/w500/${data.poster_path}"
     
  })
 

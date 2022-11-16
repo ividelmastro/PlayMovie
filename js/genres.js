@@ -14,11 +14,8 @@ fetch('https://api.themoviedb.org/3/genre/movie/list?api_key=400f43d154bc968e0f7
 
     for (let i = 0; i < data.genres.length; i++) {
       elementoslista += `<article class="cajahijo">
-                            <a class = "hipervinculo" href="./detail-generes.html"> 
-                            ${data.genres[i].name}
-                        
-                            <a/>
-                            </article>`
+                            <a class = "hipervinculo" href="./detail-generes.html?id=${data.genres[i].name}"> ${data.genres[i].name} </a>
+                          </article>`
       }
       console.log(elementoslista);
       lista.innerHTML = elementoslista; 

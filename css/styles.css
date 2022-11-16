@@ -196,7 +196,7 @@ footer {
     text-align: left;
 }
 
-.datostg{
+.datos_pelicula{
     text-align:left;
     padding: 20px;
     margin: 20px;
@@ -267,7 +267,7 @@ footer {
     flex-direction: row;
 }
 
-.foto_pelicula img{
+.foto_pelicula {
     display:block;
     width: 600px;
     height: 380px;
@@ -276,20 +276,20 @@ footer {
     border-radius: 15px;   
 }
 
-.lista_tg {
+.lista_pelicula {
     margin-left: 15%;
     margin-top: 10%;
     list-style: none;
 }
 
-.lista_tg .titulo_lista {
+.lista_pelicula .titulo_lista {
     font-weight: bold;
     font-size: 20px;
     margin: 17px;
     list-style: none;
 }
 
-.lista_tg .subtitulo_lista {
+.lista_pelicula .subtitulo_lista {
     font-weight: normal;
     font-size: 16px;
 }
@@ -328,7 +328,7 @@ footer {
     margin-bottom: 2%;
 }
 
-.fototopgun img {
+.foto_pelicula {
     width: 450px;
     height: 250px;
 }
@@ -371,14 +371,14 @@ footer {
         text-align:center;   
     }
 
-    .foto_tg img {
+    .foto_pelicula {
         width: 450px;
         height: 400px;
         margin-top: 2%;
         margin-left: -2%;    
     }
     
-    .lista_tg {
+    .lista_pelicula {
         display: none;
     }
 
