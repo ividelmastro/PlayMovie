@@ -10,7 +10,7 @@ let qsObject = new URLSearchParams(location.search)
 let id = qsObject.get("id")
 
 //endpoint con el id de la qs
-let url = `https://api.themoviedb.org/3/search/movie?query=${id}api_key=400f43d154bc968e0f7c02f3b9187c48&language=en-US&page=1&include_adult=false`
+let url = `https://api.themoviedb.org/3/search/movie?query=${id}&api_key=400f43d154bc968e0f7c02f3b9187c48&language=en-US&page=1&include_adult=false`
 
 
 //FETCH
@@ -29,10 +29,9 @@ fetch(url)
 
         
         // Agregar la información de la api y mostrarlo en el html
-        nombre.innerText = data.name;
-        status.innerText += data.status;
-        especie.innerText += data.species;
-        img.src=data.image;
+        titulo.innerText = data.results.original_title;
+        descripcion.innerText += data.results.overview;
+        img.src= data.results.backdrop_path;
     
  })
 

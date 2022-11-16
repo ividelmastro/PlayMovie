@@ -8,7 +8,7 @@ fetch ('https://api.themoviedb.org/3/movie/popular?api_key=400f43d154bc968e0f7c0
   return response.json();
 
 }) 
-``
+
   .then(function(data){
     console.log (data)
     let lista = document.querySelector(".peliculas_populares")
