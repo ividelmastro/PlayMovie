@@ -16,7 +16,7 @@ fetch ('https://api.themoviedb.org/3/movie/popular?api_key=400f43d154bc968e0f7c0
 
     for (let i = 0; i < data.results.length; i++) {
       elementoslista += `<article class = "pelicula">
-                          <a class = "hipervinculo" href="./detail-movie.html"> 
+                          <a class = "hipervinculo" href="./detail-movie.html?id=${data.results[i].id}"> 
                             <img class ="imagenPP" src= "https://image.tmdb.org/t/p/w500/${data.results[i].backdrop_path}" alt=''/>
                             <p class= "titulo"> ${data.results[i].title} </p>
                             <p class ="estreno"> Estreno: ${data.results[i].release_date}</p>
