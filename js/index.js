@@ -28,9 +28,9 @@ fetch ('https://api.themoviedb.org/3/movie/popular?api_key=400f43d154bc968e0f7c0
      
 })
 
-.catch(function(error){
-  console.log ('el error fue: ' + error);
-})
+  .catch(function(error){
+    console.log ('el error fue: ' + error);
+  })
 
 //SERIES POPULARES
 fetch ('https://api.themoviedb.org/3/tv/popular?api_key=400f43d154bc968e0f7c02f3b9187c48&language=en-US&page=1') 
