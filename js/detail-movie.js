@@ -42,8 +42,9 @@ fetch(url)
         // Agregar la información de la api y mostrarlo en el html
         titulo.innerHTML += data.original_title;
         sinopsis.innerHTML += data.overview;
-        rating.innerHTML += data.vote_average;
+        calificacion.innerHTML += data.vote_average;
         fecha.innerHTML += data.release_date;
+        duracion.innerHTML += data.runtime + "min";
 
         let generos = ""
         let info = data
@@ -56,7 +57,7 @@ fetch(url)
         ///DESPUES DE HACER DETAIL GENEROS VER ESTOOOOOOO
         for (let i = 0; i < info.genres.length; i++) {
             generos +=
-                `<p><a href="./detail-genres.html?id=${info.genres[i].id}&name_G_Movie=${info.genres[i].name}&tipo=movies">${info.genres[i].name}.  </a></p>`
+                `<p><a href="./detail-generes.html?id=${info.genres[i].id}&name_G_Movie=${info.genres[i].name}&tipo=movies">${info.genres[i].name}.  </a></p>`
         }
         capturo.innerHTML += generos;
 
