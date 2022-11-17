@@ -1,60 +1,77 @@
-let buscador= document.querySelector(".busqueda")
-let campo= document.querySelector(".buscador-texto")
-
-buscador.addEventListener("submit", function(evento){
-evento.preventDefault();
-console.log("error")
-
-
-    if(campo.value==""){
-        alert("El campo de búsqueda se encuentra vacío.")
-}
-
-
-    else if(campo.value.length<=2){
-        alert("Escriba mínimo 3 caracteres.")
-    }
-
-    else{
-        this.submit()
-    }
-})
-
 let queryString = location.search;
 let queryStringObj= new URLSearchParams(queryString);
-let id =queryStringObj.get("buscar")
+let queryPeliculas = queryStringObj.get("buscador")
+let tipo = queryStringObj.get("media")
 
-let cargador = document.querySelector ('.peli')
 
-let urlTrack = 'https://cors-anywhere.herokuapp.com/https://api.deezer.com/search/track?q=' + idBuscador;
+let url = `https://api.themoviedb.org/3/search/movie?api_key=400f43d154bc968e0f7c02f3b9187c48&language=en-US&page=1&include_adult=false&query=${queryPeliculas}`
 
-fetch(urlTrack)
-  .then (function(response){
-    return response.json();
-  })
-  .then (function(datos) {
-    console.log(datos)
+fetch(url)
+        .then(function (response) {
+            return response.json()
+        })
+        .then(function (data) {
+            console.log(data);
+            let info = data.results
+            let elementosLista = ''
+            if (info.length == 0) {
+                let texto = document.querySelector('.texto')
+                texto.innerText = `No hay coincidencias con "${queryPeliculas}"`
+            } else {
 
-  let section = document.querySelector ('.peliculas_buscadas')
+                for (let i = 0; i < info.length; i++) {
+                    if (info[i].poster_path == null) {
+                        elementosLista +=
+                                        ` <article class="articulo-peli-resultados">
+                                                <a href="./detailmovie.html?movie_id=${info[i].id}"> 
+                                                <img class="imgpeli-resultados" src="./img/noImage.png" alt="Portada">
+                                                </a>
+                                                <div class="padre-info-resultados">
+                                                <a href="detailmovie.html">
+                                                <h2 class="Titulo-de-peli-resultados">${info[i].title}</h2>
+                                                </a>
+                                                <h3 class="Fecha-estreno-resultados">${info[i].release_date}</h3>
+                                                <p class="sinopsis-resultados">${info[i].overview}</p>
+                                                </div>
+                                          </article>`
+                    } else {
+                        articulosBuscados +=
+                            ` <article class="articulo-peli-resultados">
+                    <a href="./detailmovie.html?movie_id=${info[i].id}"> 
+                    <img class="imgpeli-resultados" src="https://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="Portada">
+                    </a>
+                    <div class="padre-info-resultados">
+                    <a href="detailmovie.html">
+                    <h2 class="Titulo-de-peli-resultados">${info[i].title}</h2>
+                    </a>
+                    <h3 class="Fecha-estreno-resultados"> Fecha de estreno: ${info[i].release_date}</h3>
+                    <p class="sinopsis-resultados">${info[i].overview}</p>
+                    </div>
+                    </article>`
+                    }
+                }
+            }
 
-for (let i = 0; i<datos.data.length; i++){
 
-  section.innerHTML += ` 
-  
-  <article class="texto-de-busqueda">
-  <h1 class= "titulo"></h1>
-  <h3 class="nombre"><br> <a href="./detail-track.html?id=${datos.data[i].id}"> ${datos.data[i].title} </a> <br> <a href="./detail-artist.html?id=${datos.data[i].artist.id}"> ${datos.data[i].artist.name} </a> <br> <a href="./detail-album.html?id=${datos.data[i].album.id}"> ${datos.data[i].album.title}</a> <h3>
-  <img src="${datos.data[i].album.cover_medium}" alt="" class="foto">
-  <br>
-</article>
-  
-  `
+            let capturo = document.querySelector('.padre-de-peli-resultados')
+            capturo.innerHTML = articulosBuscados;
+
+            //modifico el h1 segun la palabra que busco el usuario//
+            let capturo2 = document.querySelector('h1')
+            capturo2.innerText = `Resultados de búsqueda: ${queryPelis}`;
+
+        })
+
+
+        .catch(function (error) {
+            console.log("Error: " + error)
+        })
+
 }
 
 
-  })
+window.addEventListener('load', function (e) {
+    let gif = document.querySelector(".gif")
+    gif.style.display = "none";
 
-// 
-  window.onload = function() {
-    cargador.style.display = 'none';
-  }
+})
