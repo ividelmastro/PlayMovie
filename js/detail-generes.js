@@ -12,7 +12,9 @@ let qsObject = new URLSearchParams(queryString);
 let id = queryString.get('id');
 
 //armar un fetch //
-let url = `https://api.themoviedb.org/3/genre/movie/${id}?api_key=400f43d154bc968e0f7c02f3b9187c48&language=en-US`;
+//let url = `https://api.themoviedb.org/3/genre/movie/${id}?api_key=400f43d154bc968e0f7c02f3b9187c48&language=en-US`;
+
+let url = `https://api.themoviedb.org/3/discover/movie?api_key=400f43d154bc968e0f7c02f3b9187c48&with_genres=${id}`;
 
 fetch(url)
     .then(function (response) {
@@ -25,29 +27,26 @@ fetch(url)
         let info = data.results
 
         //capturo el DOM//
-        let lista = document.querySelector('.peliculas_populares')
+        let lista = document.querySelector('.pelicula')
 
         //variable vacia para luego insertar los articulos//
         let elementosPeliculas = ''
 
         for (let i = 0; i < info.length; i++) {
-            if (info[i].poster_path == null) {
-                elementosPeliculas +=
-                                    `<h1 class= "titulocomedia">${info[i].original_title}</h1>
-                                    <article class="pelicula">
-                                        <h4></h4>
-                                        <a href="./detail-movie.html?movie_id=${info[i].id}"> <img src="./img/imagen-no-disponible.jpeg" alt="Portada">
-                                        </a>   
-                                    </article>`
-            } else {
-                elementosPeliculas +=
-                                    `<article class="peliculas">
-                                        <h4>${info[i].original_title}</h4>
-                                        <a href="./detail-movie.html?movie_id=${info[i].id}"> <img src="https://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="Portada">
-                                        </a>
-                                    </article>`
-            }
-        }
+          if (info[i].poster_path == null) {
+              articulosMovies +=
+                  `<article class="article-detailgeners">
+   <h4>${info[i].original_title}</h4>
+   <a href="./detailmovie.html?movie_id=${info[i].id}"> <img src="./img/noImage.png" alt="Portada">
+   </a></article>`
+          } else {
+              articulosMovies +=
+                  `<article class="article-detailgeners">
+           <h4>${info[i].original_title}</h4>
+           <a href="./detailmovie.html?movie_id=${info[i].id}"> <img src="https://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="Portada">
+           </a></article>`
+          }
+      }
         //modifico el DOM//
         lista.innerHTML = elementosPeliculas;
     })
