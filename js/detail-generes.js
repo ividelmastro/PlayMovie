@@ -12,7 +12,6 @@ let qsObject = new URLSearchParams(queryString);
 let id = qsObject.get('id');
 
 //armar un fetch //
-//let url = `https://api.themoviedb.org/3/genre/movie/${id}?api_key=400f43d154bc968e0f7c02f3b9187c48&language=en-US`
 
 let url = `https://api.themoviedb.org/3/discover/movie?api_key=400f43d154bc968e0f7c02f3b9187c48&language=en-US&with_genres=${id}`
 
@@ -63,30 +62,4 @@ fetch(url)
     .catch(function (error) {
         console.log("Error: " + error)
     })
-
-//CONDICIONAL//
-
-//obtener valor del nombre del genero de la query string para peliculas y series
-let nombreGenero = ol.get('name_G_Movie');
-let nombreGenero2 = ol2.get('name_G_Series');
-
-//obtener valor "tipo" de la query string//
-let tipo = ol.get('tipo');
-
-let title = document.querySelector('h1'); //capturo h1
-
-if (tipo == "movies") {
-    //HACER DESAPARECER LA SECCION DE SERIES//
-    let sectionSeries = document.querySelector('.detalles_peliculas_genero')
-    sectionSeries.style.display = "none";
-    title.innerHTML = nombreGenero;
-
-}
-
-else if (tipo == "series") {
-    //HACER DESAPARECER LA SECCION DE SERIES//
-    let sectionMovies = document.querySelector('.detalles_peliculas_genero')
-    sectionMovies.style.display = "none";
-    title.innerHTML = nombreGenero2;
-}
 

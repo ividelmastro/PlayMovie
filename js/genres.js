@@ -17,7 +17,7 @@ fetch(url)
 
     for (let i = 0; i < info.length; i++) {
       elementosLista += `<article class="cajahijo">
-                            <a class = "hipervinculo" href="./detail-generes.html?id=${info[i].name}"> ${info[i].name} </a>
+                            <a class = "hipervinculo" href="./detail-generes.html?id=${info[i].id}"> ${info[i].name} </a>
                           </article>`
       }
       console.log(elementosLista);

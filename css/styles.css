@@ -133,7 +133,7 @@ footer {
     flex-direction: row;
     scroll-snap-type: x ;
     overflow-x: scroll;  
-    margin-bottom: 10%; 
+ 
 }
 
 .series_populares {
@@ -160,8 +160,8 @@ footer {
 }
 
 .imagenPP{
-    width: 600px;
-    height: 400px;
+    width: 450px;
+    height: 250px;
     margin-top: 20px;
     margin-left: 25px;
     border-radius: 15px;
