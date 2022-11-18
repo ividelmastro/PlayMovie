@@ -13,6 +13,7 @@ console.log(id)
 //endpoint con el id de la qs
 let url = `https://api.themoviedb.org/3/movie/${id}?api_key=400f43d154bc968e0f7c02f3b9187c48&language=en-US`
 
+
 //FETCH
 
 fetch(url)
@@ -115,5 +116,3 @@ fav.addEventListener('click', function (evento) {
 
 })
 
-
-        
