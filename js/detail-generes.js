@@ -9,12 +9,13 @@ let queryString = location.search;
 let qsObject = new URLSearchParams(queryString);
 
 //obtener valor de id de la query string//
-let id = queryString.get('id');
+let id = qsObject.get('id');
 
 //armar un fetch //
-//let url = `https://api.themoviedb.org/3/genre/movie/${id}?api_key=400f43d154bc968e0f7c02f3b9187c48&language=en-US`;
+//let url = `https://api.themoviedb.org/3/genre/movie/${id}?api_key=400f43d154bc968e0f7c02f3b9187c48&language=en-US`
 
-let url = `https://api.themoviedb.org/3/genre/movie/${id}?api_key=400f43d154bc968e0f7c02f3b9187c48&language=en-US`
+let url = `https://api.themoviedb.org/3/discover/movie?api_key=400f43d154bc968e0f7c02f3b9187c48&language=en-US&with_genres=${id}`
+
 
 fetch(url)
     .then(function (response) {
@@ -27,7 +28,7 @@ fetch(url)
         let info = data.results
 
         //capturo el DOM//
-        let lista = document.querySelector('.peliculas_populares') //es la section
+        let lista = document.querySelector('.detalles_peliculas_genero') 
 
         //variable vacia para luego insertar los articulos//
         let elementosPeliculas = ''
@@ -54,7 +55,7 @@ fetch(url)
           }
       }
         //modifico el DOM//
-        lista.innerHTML += elementosPeliculas;  //agregue un + nose si esta bien
+        lista.innerHTML += elementosPeliculas; 
     })
 
     .catch(function (error) {

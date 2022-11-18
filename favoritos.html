@@ -28,9 +28,17 @@
             </article>
             <article class="cuadrado"><h2><i class="fa-solid fa-bars"></i></h2></article>
             <article>
-                <form class="busqueda" action="search-results.html" method="get">
-                    <input class="search" type="text" name = "Search" placeholder="Buscar" value = ""> 
-                    <button class="bottonsearch" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>    
+                <form class="busqueda" action="./search-results.html" method="GET">
+                    <input class="opcion" type="radio" name = "media" value = "all">
+                    <label for="">Todo</label>
+                    <input class="opcion" type="radio" name="media" value="peliculas">
+                    <label for=""> Películas </label> 
+                    <input class="opcion" type="radio" name="media" value="series">
+                    <label for=""> Series </label>
+
+                    <input class= "search" name = "buscador" placeholder = "Buscar" type="text">
+                    <button class="bottonsearch" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>  
+                    <p class="texto-usuario"></p>  
                 </form>
             </article>
         </section>
@@ -119,7 +127,9 @@
     <img class="logo_footer" src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_long_1-8ba2ac31f354005783fab473602c34c3f4fd207150182061e425d366e4f34596.svg" alt="">
     <p>© 2001-2022 PlayMovie, Inc (d78383-c92736)</p>
 </footer>
-<script src="./js/search-results.js"></script>
+
+
+<script src="./js/header.js"></script>
 </body>
 
 </html>

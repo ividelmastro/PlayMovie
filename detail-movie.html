@@ -27,9 +27,17 @@
             </article>
             <article class="cuadrado"><h2><i class="fa-solid fa-bars"></i></h2></article>
             <article>
-                <form class="busqueda" action="search-results.html" method="get">
-                    <input class="search" type="text" name = "Search" placeholder="Buscar" value = ""> 
-                    <button class="bottonsearch" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>    
+                <form class="busqueda" action="./search-results.html" method="GET">
+                    <input class="opcion" type="radio" name = "media" value = "all">
+                    <label for="">Todo</label>
+                    <input class="opcion" type="radio" name="media" value="peliculas">
+                    <label for=""> Películas </label> 
+                    <input class="opcion" type="radio" name="media" value="series">
+                    <label for=""> Series </label>
+
+                    <input class= "search" name = "buscador" placeholder = "Buscar" type="text">
+                    <button class="bottonsearch" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>  
+                    <p class="texto-usuario"></p>  
                 </form>
             </article>
         </section>
@@ -87,6 +95,7 @@
 </footer>
 
 <script src="./js/detail-movie.js"></script>
+<script src="./js/header.js"></script>
 </body>
 
 

@@ -118,6 +118,24 @@ footer {
     overflow-x: scroll;   
 }
 
+.resultados_peliculas{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    scroll-snap-type: x ;
+    overflow-x: scroll;  
+    margin-bottom: 10%; 
+}
+
+.detalles_peliculas_genero{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    scroll-snap-type: x ;
+    overflow-x: scroll;  
+    margin-bottom: 10%; 
+}
+
 .series_populares {
     display: flex;
     flex-wrap: nowrap;

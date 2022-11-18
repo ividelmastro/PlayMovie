@@ -30,19 +30,27 @@
             </article>
             <article class="cuadrado"><h2><i class="fa-solid fa-bars"></i></h2></article>
             <article>
-                <form class="busqueda" action="search-results.html" method="get">
-                    <input class="search" type="text" name = "Search" placeholder="Buscar" value = ""> 
-                    <button class="bottonsearch" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>    
+                <form class="busqueda" action="./search-results.html" method="GET">
+                    <input class="opcion" type="radio" name = "media" value = "all">
+                    <label for="">Todo</label>
+                    <input class="opcion" type="radio" name="media" value="peliculas">
+                    <label for=""> Películas </label> 
+                    <input class="opcion" type="radio" name="media" value="series">
+                    <label for=""> Series </label>
+
+                    <input class= "search" name = "buscador" placeholder = "Buscar" type="text">
+                    <button class="bottonsearch" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>  
+                    <p class="texto-usuario"></p>  
                 </form>
             </article>
         </section>
     
     </header>
-    
+
 <main>
 
 <section class="principal">
-    <!--video autoplay muted loop class="trailer"><source src="./img/trailer.mp4" type="video/mp4"></video-->
+    <video autoplay muted loop class="trailer"><source src="./img/trailer.mp4" type="video/mp4"></video>
     <article>
         <h3 class = "texto-encima_thecrown"> The Crown</h3>
         <p class="texto-encima_thecrown_descripcion">The Crown es una serie creada por Peter Morgan y producida por Netflix de carácter biográfico que se centra en la vida de la Reina Isabel II de Inglaterra y la historia mundial que ha tenido lugar a lo largo de su extenso reinado. La serie explora la vida personal de la Reina, pero también plasma el mundo de la postguerra, con la sociedad en constante transformación debido a los distintos y bruscos cambios acontecidos, hasta la situación de relativa calma actual.</p>
@@ -163,7 +171,8 @@
     <img class="logo_footer" src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_long_1-8ba2ac31f354005783fab473602c34c3f4fd207150182061e425d366e4f34596.svg" alt="">
     <p>© 2001-2022 PlayMovie, Inc (d78383-c92736)</p>
 </footer>
-  
+ 
+<script src="./js/header.js"></script>
 <script src="./js/index.js"></script>
 
 </body>
