@@ -409,17 +409,19 @@ footer {
 
 .pelicula_buscada {
     display: flex;
-    flex-direction: column;
-}
-
-.cajapadre {
+    flex-wrap: nowrap;
     flex-direction: row;
-
+    scroll-snap-type: x ;
+    overflow-x: scroll;   
 }
+
 
 .section-generos-series div {
     width: 100%;
-    flex-direction: column;
+    flex-direction: row;
+    scroll-snap-type: x ;
+    overflow-x: scroll;   
+
 }
 
 .h1_search{
@@ -432,19 +434,14 @@ footer {
 
 .ul-favoritos {
     display: flex;
+    flex-wrap: nowrap;
     flex-direction: row;
+    scroll-snap-type: x ;
+    overflow-x: scroll;   
 }
-
-.favscuadrado {
-    display: flex;
-    align-items:center;
-    padding: 7px;
-    flex-direction: column;
-    margin: 7px;
-    background-color: rgba(233, 186, 157, 0.949);
-    }
 
     .h3favs{
         color:#fff;
         margin: 10px;
     }
+
