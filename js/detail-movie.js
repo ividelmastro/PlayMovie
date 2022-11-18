@@ -13,6 +13,7 @@ console.log(id)
 //endpoint con el id de la qs
 let url = `https://api.themoviedb.org/3/movie/${id}?api_key=400f43d154bc968e0f7c02f3b9187c48&language=en-US`
 
+
 //FETCH
 
 fetch(url)
@@ -61,6 +62,29 @@ fetch(url)
         capturo.innerHTML += generos;
 
 
+        ///PLATAFORMAS HACER
+        fetch("https://api.themoviedb.org/3/watch/providers/movie?api_key=400f43d154bc968e0f7c02f3b9187c48&language=en-US")
+            .then (function(response) {
+            return response.json();
+          
+          }) 
+          
+            .then(function(data){
+              console.log (data)
+              let plataformas = document.querySelector(".plataformas")
+              let elementoslista= ""
+          
+              for (let i = 0; i < data.results.length; i++) {
+                elementoslista += ``
+                }
+                console.log(elementoslista);
+                plataformas.innerHTML = elementoslista; 
+               
+          })
+          
+          .catch(function(error){
+            console.log ('el error fue: ' + error);
+          })
 
 })
 .catch(function (error) {
