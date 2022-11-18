@@ -11,7 +11,7 @@ let id = qsObject.get("id")
 console.log(id)
 
 //endpoint con el id de la qs
-let url = `https://api.themoviedb.org/3/movie/${id}?api_key=400f43d154bc968e0f7c02f3b9187c48&language=en-US`
+let url = `https://api.themoviedb.org/3/tv/${id}?api_key=400f43d154bc968e0f7c02f3b9187c48&language=en-US`
 
 
 //FETCH
@@ -28,7 +28,6 @@ fetch(url)
         let titulo = document.querySelector('.titulo_pelicula');
         let calificacion = document.querySelector('.rating');
         let fecha = document.querySelector('.fecha_estreno');
-        let duracion = document.querySelector('.duracion');
         let sinopsis = document.querySelector('.pelicula_descripcion');
 
         
@@ -40,11 +39,11 @@ fetch(url)
         }
         
         // Agregar la información de la api y mostrarlo en el html
-        titulo.innerHTML += data.original_title;
+        titulo.innerHTML += data.original_name;
         sinopsis.innerHTML += data.overview;
         calificacion.innerHTML += data.vote_average;
-        fecha.innerHTML += data.release_date;
-        duracion.innerHTML += data.runtime + "min";
+        fecha.innerHTML += data.next_episode_to_air.air_date;
+
 
         let generos = ""
         let info = data
