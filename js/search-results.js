@@ -3,8 +3,9 @@ let queryStringObj= new URLSearchParams(queryString);
 let queryPeliculas = queryStringObj.get('buscador');
 let opcion = queryStringObj.get('media');
 
-if (opcion == "all" || tipo == "peliculas") {
+if (opcion == "peliculas") {
     let url = `https://api.themoviedb.org/3/search/movie?api_key=400f43d154bc968e0f7c02f3b9187c48&language=en-US&page=1&include_adult=false&query=${queryPeliculas}`
+
    
 fetch(url)
     .then(function (response) {
@@ -55,4 +56,6 @@ fetch(url)
         .catch(function (error) {
             console.log("Error: " + error)
         })
-} 
+} else if (opcion == "series"){
+    
+}
