@@ -438,10 +438,10 @@ footer {
 .favscuadrado {
     display: flex;
     align-items:center;
-    padding: 10px;
+    padding: 7px;
     flex-direction: column;
-    margin: 10px;
-    background-color: antiquewhite;
+    margin: 7px;
+    background-color: rgba(233, 186, 157, 0.949);
     }
 
     .h3favs{
