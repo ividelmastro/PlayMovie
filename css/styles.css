@@ -434,7 +434,7 @@ footer {
 
 .ul-favoritos {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     flex-direction: row;
     scroll-snap-type: x ;
     overflow-x: scroll;   

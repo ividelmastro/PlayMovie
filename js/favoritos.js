@@ -1,17 +1,17 @@
 let recuperoStorage = localStorage.getItem('favoritosPelis');
-//let recuperoStorage2 = localStorage.getItem('favoritosSeries');
+let recuperoStorage2 = localStorage.getItem('favoritosSeries');
 let favoritos = JSON.parse(recuperoStorage);
-//let favoritos2 = JSON.parse(recuperoStorage2);
+let favoritos2 = JSON.parse(recuperoStorage2);
 
 console.log(favoritos);
-//console.log(favoritos2);
+console.log(favoritos2);
 
 
 // Capturar el contenedor de los elementos a mostrar
 let section = document.querySelector('.mis-favoritos-peliculas');
 let apiFavoritos1 = ''
-//let section2 = document.querySelector('.mis-favoritos-series');
-//let tmdbFavoritos2 = ''
+let section2 = document.querySelector('.mis-favoritos-series');
+let tmdbFavoritos2 = ''
 
 // Si el storage esta vacio indicamos al usuario que no hay favoritos seleccionados (usamos condicionales porque sino aparece null)
 if (favoritos == null || favoritos.length == 0) { //el array no toma nulo a menos que NUNCA hayas agregado algo, o que borres el localstorage, trabajo con true y false, por eso evaluamos la segunda condición que es cuando habia favoritos y los sacas todos
