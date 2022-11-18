@@ -160,8 +160,8 @@ footer {
 }
 
 .imagenPP{
-    width: 450px;
-    height: 250px;
+    width: 600px;
+    height: 400px;
     margin-top: 20px;
     margin-left: 25px;
     border-radius: 15px;
@@ -406,3 +406,45 @@ footer {
     }
 
 }
+
+.pelicula_buscada {
+    display: flex;
+    flex-direction: column;
+}
+
+.cajapadre {
+    flex-direction: row;
+
+}
+
+.section-generos-series div {
+    width: 100%;
+    flex-direction: column;
+}
+
+.h1_search{
+    color: #fff;
+}
+
+.boton2 {
+    color: #fff;
+}
+
+.ul-favoritos {
+    display: flex;
+    flex-direction: row;
+}
+
+.favscuadrado {
+    display: flex;
+    align-items:center;
+    padding: 10px;
+    flex-direction: column;
+    margin: 10px;
+    background-color: antiquewhite;
+    }
+
+    .h3favs{
+        color:#fff;
+        margin: 10px;
+    }

@@ -7,7 +7,7 @@ formulario.addEventListener('submit', function (evento) {
     evento.preventDefault()
     console.log("Error. Sin enviar");
 
-    if (campo.value == "") {
+    if (campo.value == " ") {
         texto.innerText = "El campo es obligatorio";
         campo.style.outline = "2px solid red"
         texto.style.fontWeight = "bold" // aplica para el else if de abajo tambien ya que se usa "message" en ambos casos

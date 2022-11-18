@@ -67,5 +67,54 @@ fetch(url)
 .catch(function (error) {
     console.log(error);
 })
-        
+
+
+// Crear array
+
+let favoritos = [];
+
+// Recuperar storage
+
+let recuperoStorage = localStorage.getItem('favoritosPelis'); // te va a devolver null o los datos
+
+if (recuperoStorage != null) {
+    //1ero tenemos que transformarlo de cadena de texto con JSON.parse y despues lo guardamos en favoritos 
+    favoritos = JSON.parse(recuperoStorage);
+}
+
+// Hacer click en el link. Primero deberemos capturar el elemento
+let fav = document.querySelector('.boton2');
+
+// Chequear que id este en el array de favoritos 
+if (favoritos.includes(id)) {
+    fav.innerText = "Quitar de favoritos"
+}
+
+fav.addEventListener('click', function (evento) {
+    evento.preventDefault();
+
+    if (favoritos.includes(id)) {
+        // Si el id esta en el array
+        let indice = favoritos.indexOf(id);
+
+        //Borrar a partir del indice 1 elemento 
+        favoritos.splice(indice, 1)
+        fav.innerText = "Agregar a favoritos"
+    }
+
+    else { // Guardar dato en un array: agregar un dato al array 
+        favoritos.push(id);
+        fav.innerText = "Quitar de favoritos";
+    }
+
+    // Guardar el array en el storage (esto se hace pase lo que pase, no se mete en el else)
+    let favsToString = JSON.stringify(favoritos); // Transformamos el array en una cadena de texto
+
+    localStorage.setItem("favoritosPelis", favsToString);
+
+    console.log(localStorage);
+
+})
+
+
         
