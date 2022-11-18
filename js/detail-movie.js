@@ -54,10 +54,9 @@ fetch(url)
             generos += `<p> No se encontraron generos </p>`
         }
 
-        ///DESPUES DE HACER DETAIL GENEROS VER ESTOOOOOOO
         for (let i = 0; i < info.genres.length; i++) {
             generos +=
-                `<p><a href="./detail-generes.html?id=${info.genres[i].id}&name_G_Movie=${info.genres[i].name}&tipo=movies">${info.genres[i].name}.  </a></p>`
+                `<p><a href="./detail-generes.html?id=${info.genres[i].id}&name_G_Movie=${info.genres[i].name}&opcion=movies">${info.genres[i].name}.  </a></p>`
         }
         capturo.innerHTML += generos;
 
@@ -68,18 +67,22 @@ fetch(url)
             return response.json();
           
           }) 
-          
-            .then(function(data){
-              console.log (data)
+            .then(function(data2){
+              console.log (data2)
               let plataformas = document.querySelector(".plataformas")
               let elementoslista= ""
+
+              if (data2.results == null || data2.results == "") {
+                elementoslista += `<p> No se encuentra disponible en ninguna plataforma. </p>`
+            }
           
-              for (let i = 0; i < data.results.length; i++) {
-                elementoslista += ``
-                }
-                console.log(elementoslista);
-                plataformas.innerHTML = elementoslista; 
-               
+              for (let i = 0; i < data2.results.length; i++){
+                elementoslista +=
+                                `<li>${data2.results[i].provider_name}.</li>`
+            }
+            console.log(elementoslista);
+            plataformas.innerHTML += elementoslista;
+              
           })
           
           .catch(function(error){

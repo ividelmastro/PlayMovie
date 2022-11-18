@@ -315,8 +315,8 @@ footer {
 .cajapadre {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
     margin-top: 5%;
     background-color: rgba(200, 200, 200, 0.471);
 }
@@ -336,6 +336,9 @@ footer {
 .cajahijo a:hover {
     background-color: #fff;
     color: black;
+}
+.titulo_generos{
+    color: #fff;
 }
 
 .h1_search {
