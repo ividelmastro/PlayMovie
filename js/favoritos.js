@@ -9,8 +9,8 @@ console.log(favoritos2);
 
 // Capturar el contenedor de los elementos a mostrar
 let section = document.querySelector('.favoritos-peliculas');
-let apiFavs1 = ''
 let section2 = document.querySelector('.favoritos-series');
+let apiFavs1 = ''
 let apiFavs2 = ''
 
 // Si el storage esta vacio indicamos al usuario que no hay favoritos seleccionados (usamos condicionales porque sino aparece null)
@@ -25,6 +25,19 @@ if (favoritos == null || favoritos.length == 0) {
 else {
     for (let i = 0; i < favoritos.length; i++) { 
         buscarYMostrarFavoritos(favoritos[i])
+    }
+}
+
+if (favoritos2 == null || favoritos2.length == 0) { //el array no toma nulo a menos que NUNCA hayas agregado algo, o que borres el localstorage, trabajo con true y false, por eso evaluamos la segunda condición que es cuando habia favoritos y los sacas todos
+    section2.innerHTML = '<p> No hay series favoritas seleccionadas </p>'
+    section2.style.color = "white"
+    section2.style.fontWeight = "bold"
+    section2.style.fontSize = "20px"
+}
+
+else {
+    for (let i = 0; i < favoritos2.length; i++) { // Hacer un for (bucle) para recorrer el array
+        buscarYMostrarFavoritos2(favoritos2[i])
     }
 }
 

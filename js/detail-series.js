@@ -1,13 +1,13 @@
 let queryString= location.search
-console.log(queryString)
 
-let qsObject = new URLSearchParams(queryString)
+
+let qsObject = new URLSearchParams(location.search)
 
 let id = qsObject.get("id")
 console.log(id)
 
 let url = `https://api.themoviedb.org/3/tv/${id}?api_key=400f43d154bc968e0f7c02f3b9187c48&language=en-US`
-console.log(url)
+
 
 
 //FETCH
