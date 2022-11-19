@@ -1,5 +1,5 @@
-let recuperoStorage = localStorage.getItem('favoritosPelis');
-let recuperoStorage2 = localStorage.getItem('favoritosSeries');
+let recuperoStorage = localStorage.getItem('peliculas_favoritas');
+let recuperoStorage2 = localStorage.getItem('series_favoritas');
 let favoritos = JSON.parse(recuperoStorage);
 let favoritos2 = JSON.parse(recuperoStorage2);
 

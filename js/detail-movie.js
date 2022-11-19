@@ -92,7 +92,7 @@ fetch(url)
 // FAVS
 let favoritos = [];
 
-let recuperoStorage = localStorage.getItem('favoritosPelis'); // te va a devolver null o los datos
+let recuperoStorage = localStorage.getItem('peliculas_favoritas'); // te va a devolver null o los datos
 
 if (recuperoStorage != null) {
     //1ero tenemos que transformarlo de cadena de texto con JSON.parse y despues lo guardamos en favoritos 
@@ -127,7 +127,7 @@ fav.addEventListener('click', function (evento) {
     // Guardar el array en el storage (esto se hace pase lo que pase, no se mete en el else)
     let favsToString = JSON.stringify(favoritos); // Transformamos el array en una cadena de texto
 
-    localStorage.setItem("favoritosPelis", favsToString);
+    localStorage.setItem("peliculas_favoritas", favsToString);
 
     console.log(localStorage);
 

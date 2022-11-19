@@ -61,7 +61,7 @@ fetch(url)
 
 //FAVS
 let favoritos = [];
-let recuperoStorage = localStorage.getItem('favoritosSeries'); 
+let recuperoStorage = localStorage.getItem('series_favoritas'); 
 
 if (recuperoStorage != null) {
     favoritos = JSON.parse(recuperoStorage);
@@ -90,7 +90,7 @@ favss.addEventListener('click', function (evento) {
 
     let favsToString = JSON.stringify(favoritos); 
 
-    localStorage.setItem("favoritosSeries", favsToString);
+    localStorage.setItem("series_favoritas", favsToString);
 
     console.log(localStorage);
 
