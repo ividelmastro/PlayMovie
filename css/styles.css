@@ -419,7 +419,7 @@ footer {
 }
 
 
-.section-generos-series div {
+.generos_series article:hover {
     width: 100%;
     flex-direction: row;
     scroll-snap-type: x ;
@@ -435,16 +435,19 @@ footer {
     color: #fff;
 }
 
-.ul-favoritos {
+.lista_favoritos  {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     flex-direction: row;
     scroll-snap-type: x ;
     overflow-x: scroll;   
 }
 
-    .h3favs{
+.nombre_favoritos{
         color:#fff;
         margin: 10px;
     }
 
+.seccion-favoritos {
+    color: #fff;
+}

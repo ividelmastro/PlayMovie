@@ -8,13 +8,13 @@ console.log(favoritos2);
 
 
 // Capturar el contenedor de los elementos a mostrar
-let section = document.querySelector('.mis-favoritos-peliculas');
-let apiFavoritos1 = ''
-let section2 = document.querySelector('.mis-favoritos-series');
-let tmdbFavoritos2 = ''
+let section = document.querySelector('.favoritos-peliculas');
+let apiFavs1 = ''
+let section2 = document.querySelector('.favoritos-series');
+let apiFavs2 = ''
 
 // Si el storage esta vacio indicamos al usuario que no hay favoritos seleccionados (usamos condicionales porque sino aparece null)
-if (favoritos == null || favoritos.length == 0) { //el array no toma nulo a menos que NUNCA hayas agregado algo, o que borres el localstorage, trabajo con true y false, por eso evaluamos la segunda condición que es cuando habia favoritos y los sacas todos
+if (favoritos == null || favoritos.length == 0) { 
     section.innerHTML = '<p> No hay peliculas favoritas seleccionadas </p>'
     section.style.color = "white"
     section.style.fontWeight = "bold"
@@ -23,19 +23,17 @@ if (favoritos == null || favoritos.length == 0) { //el array no toma nulo a meno
 }
 
 else {
-    for (let i = 0; i < favoritos.length; i++) { // Hacer un for (bucle) para recorrer el array
+    for (let i = 0; i < favoritos.length; i++) { 
         buscarYMostrarFavoritos(favoritos[i])
     }
 }
 
 
-// PARTE DE PELICULAS
+// pelis
 
-function buscarYMostrarFavoritos(id) { // no importa donde la crees, primero que lee JS es funciones y despues ejecuta el código
+function buscarYMostrarFavoritos(id) { 
 
-    // Adentro del for, buscar cada elemento del array (te lo da la API con un fetch)
-
-    let url = `https://api.themoviedb.org/3/movie/${id}?api_key=400f43d154bc968e0f7c02f3b9187c48` // En cada posición del array, guardamos el id de cada personaje que se haya agregado a favoritos
+    let url = `https://api.themoviedb.org/3/movie/${id}?api_key=400f43d154bc968e0f7c02f3b9187c48` 
 
     fetch(url)
         .then(function (response) {
@@ -44,16 +42,13 @@ function buscarYMostrarFavoritos(id) { // no importa donde la crees, primero que
         .then(function (data) {
             console.log(data);
 
-            apiFavoritos1 += `<ul class="ul-favoritos">
-            <li class="favscuadrado">
-                <h3 class="h3favs"> ${data.original_title}</h3>
-                <a href="./detail-movie.html?movie_id=${data.id}"><img class="imgfavs" src=https://image.tmdb.org/t/p/w342${data.poster_path} alt='Imagen pelicula/serie'/></a>
+            apiFavs1 += `<ul class="lista_favoritos">
+            <li >
+                <h3 class="nombre_favoritos"> ${data.original_title}</h3>
+                <a href="./detail-movie.html?movie_id=${data.id}"><img src=https://image.tmdb.org/t/p/w500${data.backdrop_path} alt='Img peliculas'/></a>
                 </li>`
-
-
-            // mostrarlo al usuario
-
-            section.innerHTML = apiFavoritos1; // dejar acá porque afuera no funciona
+            
+            section.innerHTML = apiFavs1; 
 
         })
         .catch(function (error) {
@@ -62,3 +57,34 @@ function buscarYMostrarFavoritos(id) { // no importa donde la crees, primero que
         })
 
 }
+
+
+// series
+
+function buscarYMostrarFavoritos2(id) {
+
+    let url2 = `https://api.themoviedb.org/3/tv/${id}?api_key=400f43d154bc968e0f7c02f3b9187c48`
+
+    fetch(url2)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            console.log(data);
+            apiFavs2 += `
+            <ul class="lista_favoritos">
+            <li >
+                  <h3 class="nombre_favoritos"> ${data.original_name}</h3>
+                  <a href="./detail-serie.html?tv_id=${data.id}"><img src=https://image.tmdb.org/t/p/w500${data.backdrop_path} alt='Img series'/></a>
+            </li>
+            <ul/>`
+            
+            section2.innerHTML = apiFavs2; 
+
+        })
+        .catch(function (error) {
+            console.log(error);
+
+        })
+}
+

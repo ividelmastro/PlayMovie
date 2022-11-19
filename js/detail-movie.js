@@ -1,16 +1,10 @@
-//DETALLE DE PELICULAS:
-//Obtengo la qs
-
 let queryString= location.search
 
-//Construyo objeto literal
 let qsObject = new URLSearchParams(location.search)
 
-//Obtengo el id de la propiedad del objeto literal
 let id = qsObject.get("id")
 console.log(id)
 
-//endpoint con el id de la qs
 let url = `https://api.themoviedb.org/3/movie/${id}?api_key=400f43d154bc968e0f7c02f3b9187c48&language=en-US`
 
 
@@ -23,7 +17,7 @@ fetch(url)
 
     .then(function(data){
         console.log(data);
-        //capturar cada elemento del html que queremos completar
+
         let img = document.querySelector('.foto_pelicula');
         let titulo = document.querySelector('.titulo_pelicula');
         let calificacion = document.querySelector('.rating');
@@ -38,8 +32,7 @@ fetch(url)
         else{
             img.src= `https://image.tmdb.org/t/p/w500/${data.poster_path}`;
         }
-        
-        // Agregar la información de la api y mostrarlo en el html
+
         titulo.innerHTML += data.original_title;
         sinopsis.innerHTML += data.overview;
         calificacion.innerHTML += data.vote_average;
@@ -61,7 +54,7 @@ fetch(url)
         capturo.innerHTML += generos;
 
 
-        ///PLATAFORMAS HACER
+        ///PLATAFORMAS 
         fetch("https://api.themoviedb.org/3/watch/providers/movie?api_key=400f43d154bc968e0f7c02f3b9187c48&language=en-US")
             .then (function(response) {
             return response.json();
@@ -95,11 +88,9 @@ fetch(url)
 })
 
 
-// Crear array
 
+// FAVS
 let favoritos = [];
-
-// Recuperar storage
 
 let recuperoStorage = localStorage.getItem('favoritosPelis'); // te va a devolver null o los datos
 
