@@ -44,12 +44,12 @@ fetch(url)
         let capturo = document.querySelector(".generos")
 
         if (info.genres == null || info.genres == 0) {
-            generos += `<p> No se encontraron generos </p>`
+            generos += `<p> No se encontraron géneros </p>`
         }
 
         for (let i = 0; i < info.genres.length; i++) {
             generos +=
-                `<p><a href="./detail-generes.html?id=${info.genres[i].id}&name_G_Movie=${info.genres[i].name}&opcion=movies">${info.genres[i].name}.  </a></p>`
+                `<p><a class= "hipervinculo" href="./detail-generes.html?id=${info.genres[i].id}&name_G_Movie=${info.genres[i].name}&opcion=movies">${info.genres[i].name}.</a></p>`
         }
         capturo.innerHTML += generos;
 
@@ -66,7 +66,7 @@ fetch(url)
               let elementoslista= ""
 
               if (data2.results == null || data2.results == "") {
-                elementoslista += `<p> No se encuentra disponible en ninguna plataforma. </p>`
+                elementoslista += `<p> Por el momento no se encuentra disponible en ninguna plataforma. </p>`
             }
           
               for (let i = 0; i < data2.results.length; i++){

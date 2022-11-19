@@ -20,7 +20,7 @@ fetch(url)
         let elementosLista = ''
         if (info_api.length == 0) {
             let texto = document.querySelector('.texto')
-            texto.innerText = `Contenido similar a "${queryPeliculas}":`
+            texto.innerText = `No hay resultado para su búsqueda":`
         } else {
             for (let i = 0; i < info_api.length; i++) {
                 if (info_api[i].poster_path == null) {

@@ -7,8 +7,8 @@ formulario.addEventListener('submit', function (evento) {
     evento.preventDefault()
     console.log("Error. Sin enviar");
 
-    if (campo.value == " ") {
-        texto.innerText = "El campo es obligatorio";
+    if (campo.value == "") {
+        texto.innerText = "El campo es obligatorio.";
         campo.style.outline = "2px solid red"
         texto.style.fontWeight = "bold" 
         texto.style.color = "red" 
@@ -16,7 +16,7 @@ formulario.addEventListener('submit', function (evento) {
 
     else if (campo.value.length <= 2) {
         texto.innerText = "Debe escribir al menos 3 caracteres."
-        texto.style.color = "white";
+        texto.style.color = "red";
         campo.style.outline = "2px solid red"
     }
 
