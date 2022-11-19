@@ -134,4 +134,30 @@ fav.addEventListener('click', function (evento) {
 })
 
 
-        
+///VER RECOMENDACIONES: falta terminar
+
+function ocultar(){
+    document.getElementById('obj1').style.display = 'none';
+    }
+
+function mostrar(){
+document.getElementById('obj2').style.display = 'block';
+}
+
+let mostrar = document.querySelector('span');
+mostrar.style.display = 'inline';
+
+
+fetch("https://api.themoviedb.org/3/movie/${id}/recommendations?api_key=400f43d154bc968e0f7c02f3b9187c48&language=en-US&page=1")
+    .then(function(response){
+        return response.json();
+})
+
+    .then(function(data){
+        console.log(data);
+
+    })
+    
+    .catch(function (error) {
+        console.log(error);
+    })
