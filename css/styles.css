@@ -439,10 +439,11 @@ footer {
 
 
 .generos_series article:hover {
-    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
     flex-direction: row;
     scroll-snap-type: x ;
-    overflow-x: scroll;   
+    overflow-x: scroll; 
 
 }
 
@@ -454,12 +455,12 @@ footer {
     color: #fff;
 }
 
-.lista_favoritos  {
+.lista_favoritos   {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
     scroll-snap-type: x ;
-    overflow-x: scroll;   
+    overflow-x: scroll;  
 }
 
 .nombre_favoritos{
@@ -469,6 +470,7 @@ footer {
 
 .seccion-favoritos {
     color: #fff;
+    
 }
 
 label{
