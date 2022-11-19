@@ -58,7 +58,7 @@ function buscarYMostrarFavoritos(id) {
             apiFavs1 += `<ul class="lista_favoritos">
             <li >
                 <h3 class="nombre_favoritos"> ${data.original_title}</h3>
-                <a href="./detail-movie.html?movie_id=${data.id}"><img src=https://image.tmdb.org/t/p/w500${data.backdrop_path} alt='Img peliculas'/></a>
+                <a href="./detail-movie.html?id=${data.id}"><img src=https://image.tmdb.org/t/p/w500${data.backdrop_path} alt='Img peliculas'/></a>
                 </li>`
             
             section.innerHTML = apiFavs1; 
@@ -88,7 +88,7 @@ function buscarYMostrarFavoritos2(id) {
             <ul class="lista_favoritos">
             <li >
                   <h3 class="nombre_favoritos"> ${data.original_name}</h3>
-                  <a href="./detail-serie.html?tv_id=${data.id}"><img src=https://image.tmdb.org/t/p/w500${data.backdrop_path} alt='Img series'/></a>
+                  <a href="./detail-serie.html?id=${data.id}"><img src=https://image.tmdb.org/t/p/w500${data.backdrop_path} alt='Img series'/></a>
             </li>
             <ul/>`
             
