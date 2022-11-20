@@ -55,28 +55,20 @@ fetch(url)
 
 
         ///PLATAFORMAS 
-        fetch("https://api.themoviedb.org/3/watch/providers/movie?api_key=400f43d154bc968e0f7c02f3b9187c48&language=en-US")
+        fetch(`https://api.themoviedb.org/3/movie/${id}/watch/providers?api_key=400f43d154bc968e0f7c02f3b9187c48`)
             .then (function(response) {
             return response.json();
-          
           }) 
+
             .then(function(data2){
               console.log (data2)
               let plataformas = document.querySelector(".plataformas")
               let elementoslista= ""
 
-              if (data2.results == null || data2.results == "") {
-                elementoslista += `<p> Por el momento no se encuentra disponible en ninguna plataforma. </p>`
+              for (let i = 0; i < 1; i++){
+                plataformas.innerText = data2.results.US.flatrate[0].provider_name
             }
-          
-              for (let i = 0; i < data2.results.length; i++){
-                elementoslista +=
-                                `<li>${data2.results[i].provider_name}.</li>`
-            }
-            console.log(elementoslista);
-            plataformas.innerHTML += elementoslista;
-              
-          })
+            })
           
           .catch(function(error){
             console.log ('el error fue: ' + error);
