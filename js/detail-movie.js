@@ -65,10 +65,14 @@ fetch(url)
               let plataformas = document.querySelector(".plataformas")
               let elementoslista= ""
 
-              for (let i = 0; i < 1; i++){
-                plataformas.innerText = data2.results.US.flatrate[0].provider_name
+              for (let i = 0; i < data2.results.US.flatrate.length; i++){
+                elementoslista +=
+                                `<li>${data2.results.US.flatrate[i].provider_name}.</li>`
             }
-            })
+            console.log(elementoslista);
+            plataformas.innerHTML += elementoslista;
+              
+          })
           
           .catch(function(error){
             console.log ('el error fue: ' + error);
