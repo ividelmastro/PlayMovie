@@ -52,6 +52,30 @@ fetch(url)
         }
         query.innerHTML += generos
 
+         ///PLATAFORMAS 
+         fetch(`https://api.themoviedb.org/3/tv/${id}/watch/providers?api_key=400f43d154bc968e0f7c02f3b9187c48`)
+         .then (function(response) {
+         return response.json();
+       }) 
+
+         .then(function(data2){
+           console.log (data2)
+           let plataformas = document.querySelector(".plataformas")
+           let elementoslista= ""
+
+           for (let i = 0; i < data2.results.US.flatrate.length; i++){
+             elementoslista +=
+                             `<li>${data2.results.US.flatrate[i].provider_name}.</li>`
+         }
+         console.log(elementoslista);
+         plataformas.innerHTML += elementoslista;
+           
+       })
+       
+       .catch(function(error){
+         console.log ('el error fue: ' + error);
+       })
+
 
 
 })

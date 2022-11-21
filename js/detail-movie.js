@@ -64,11 +64,15 @@ fetch(url)
               console.log (data2)
               let plataformas = document.querySelector(".plataformas")
               let elementoslista= ""
-
+                
+              if (data2.results.US.flatrate == null || data2.results.US.flatrate ==""){
+                elementoslista += "<p>Por el momento no se encuentra disponible en ninguna plataforma. </p> "
+              }
               for (let i = 0; i < data2.results.US.flatrate.length; i++){
                 elementoslista +=
                                 `<li>${data2.results.US.flatrate[i].provider_name}.</li>`
             }
+
             console.log(elementoslista);
             plataformas.innerHTML += elementoslista;
               
@@ -128,4 +132,46 @@ fav.addEventListener('click', function (evento) {
     console.log(localStorage);
 
 })
+
+///RECOMENDACIONES:
+
+let url2= `https://api.themoviedb.org/3/movie/${id}/recommendations?api_key=400f43d154bc968e0f7c02f3b9187c48&language=en-US&page=1`
+
+fetch(url2)
+.then (function(response) {
+return response.json();
+}) 
+
+.then(function(data3){
+  console.log (data3)
+  info2= data.results
+  let recomendaciones = document.querySelector(".recomendaciones");
+  let cuerpo = document.querySelector(".peliculas_recomendadas")
+  let titulos = document.querySelector(".titulos_peliculas")
+  let sinopsis = document.querySelector(".sinopsis_peliculas")
+  recomendaciones.addEventListener("click", function(){
+    cuerpo.style.display = "none"
+    titulos.style.display= "block"
+    recomendaciones.style.display= "flex"
+
+    for (let i=0; i<5; i++){
+        recomendaciones.innerHTML+=
+                            `<article class = "pelicula">
+                            <a class = "hipervinculo" href="detail-movie.html?id=${info_api[i].id}"> 
+                            <img class ="imagenPP" src= "https://image.tmdb.org/t/p/w500/${info_api[i].backdrop_path}" alt=''/>
+                            <p class= "titulo"> ${info_api[i].original_title} </p>
+                            <p class ="estreno"> Estreno: ${info_api[i].release_date}</p>
+                            <a/>
+                            </article>`
+
+    }
+  })
+  
+  
+})
+
+.catch(function(error){
+console.log ('el error fue: ' + error);
+})
+
 
