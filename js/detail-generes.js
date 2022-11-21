@@ -51,7 +51,7 @@ fetch(url)
                                   <p class ="estreno"> Estreno: ${info[i].release_date}</p>
                                   </a>
                                   </article>`
-          }
+          }g
       }
 
     
@@ -99,6 +99,8 @@ fetch(url2)
 
         //variable vacia para luego insertar los articulos//
         let elementosSeries = ''
+
+        let i = 0;
 
         for (let i = 0; i < info2.length; i++) {
           if (info2[i].poster_path == null) {

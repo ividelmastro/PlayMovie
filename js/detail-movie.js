@@ -144,25 +144,25 @@ return response.json();
 
 .then(function(data3){
   console.log (data3)
-  info2= data.results
+  info2= data3.results
   let recomendaciones = document.querySelector(".recomendaciones");
   let cuerpo = document.querySelector(".peliculas_recomendadas")
   let titulos = document.querySelector(".titulos_peliculas")
   let sinopsis = document.querySelector(".sinopsis_peliculas")
-  recomendaciones.addEventListener("click", function(){
+  sinopsis_peliculas.addEventListener("click", function(){
     cuerpo.style.display = "none"
     titulos.style.display= "block"
     recomendaciones.style.display= "flex"
 
     for (let i=0; i<5; i++){
         recomendaciones.innerHTML+=
-                            `<article class = "pelicula">
-                            <a class = "hipervinculo" href="detail-movie.html?id=${info_api[i].id}"> 
-                            <img class ="imagenPP" src= "https://image.tmdb.org/t/p/w500/${info_api[i].backdrop_path}" alt=''/>
-                            <p class= "titulo"> ${info_api[i].original_title} </p>
-                            <p class ="estreno"> Estreno: ${info_api[i].release_date}</p>
-                            <a/>
-                            </article>`
+                            `<a class = "hipervinculo" href="detail-movie.html?id=${info2[i].id}"> 
+                            <article class = "pelicula">
+                            <img class ="imagenPP" src= "https://image.tmdb.org/t/p/w500/${info2[i].backdrop_path}" alt=''/>
+                            <p class= "titulo"> ${info2[i].original_title} </p>
+                            <p class ="estreno"> Estreno: ${info2[i].release_date}</p>
+                            </article>
+                            <a/>`
 
     }
   })
