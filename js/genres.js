@@ -34,8 +34,6 @@ fetch(url)
 
 ///GENERO SERIES
 
-///GENERO PELICULAS
-
 let url2= `https://api.themoviedb.org/3/genre/tv/list?api_key=400f43d154bc968e0f7c02f3b9187c48&language=en-US`
 
 fetch(url2)
