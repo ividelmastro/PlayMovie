@@ -136,6 +136,15 @@ footer {
  
 }
 
+.detalles_series_genero{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    scroll-snap-type: x ;
+    overflow-x: scroll;  
+ 
+}
+
 .series_populares {
     display: flex;
     flex-wrap: nowrap;
@@ -348,6 +357,16 @@ footer {
     margin-top: 5%;
     background-color: rgba(200, 200, 200, 0.471);
 }
+.cajapadre2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 5%;
+    background-color: rgba(200, 200, 200, 0.471);
+}
+
+
 
 .cajahijo {  
     margin: 2%;
@@ -455,12 +474,10 @@ footer {
     color: #fff;
 }
 
-.lista_favoritos   {
+.lista_favoritos  {
     display: flex;
     flex-wrap: nowrap;
-    flex-direction: row;
-    scroll-snap-type: x ;
-    overflow-x: scroll;  
+    flex-direction: initial;
 }
 
 .nombre_favoritos{
@@ -478,5 +495,9 @@ label{
     margin: 1px;
 }
 .recomendaciones{
+    color: #fff;
+}
+
+.h2_genero{
     color: #fff;
 }

@@ -1,17 +1,17 @@
-let queryString= location.search
+let queryString2= location.search
 
 
-let qsObject = new URLSearchParams(location.search)
+let qsObject2 = new URLSearchParams(location.search)
 
-let id = qsObject.get("id")
-console.log(id)
+let id2 = qsObject2.get("id")
+console.log(id2)
 
-let url = `https://api.themoviedb.org/3/tv/${id}?api_key=400f43d154bc968e0f7c02f3b9187c48&language=en-US`
+let url2 = `https://api.themoviedb.org/3/tv/${id2}?api_key=400f43d154bc968e0f7c02f3b9187c48&language=en-US`
 
 
 
 //FETCH
-fetch(url)
+fetch(url2)
     .then(function(response){
         return response.json();
 })
@@ -35,7 +35,7 @@ fetch(url)
         titulo.innerHTML += data.original_name;
         sinopsis.innerHTML += data.overview;
         calificacion.innerHTML += data.vote_average;
-        fecha.innerHTML += data.next_episode_to_air.air_date;
+        fecha.innerHTML += data.first_air_date;
 
         let generos = ""
         let info = data
@@ -45,38 +45,35 @@ fetch(url)
             generos += `<p> No hay generos </p>`
         }
 
-        ///DESPUES DE HACER DETAIL GENEROS VER ESTOOOOOOO
         for (let i = 0; i < info.genres.length; i++) {
             generos +=
-                `<p><a href="./detail-generes.html?id=${info.genres[i].id}&name_G_Movie=${info.genres[i].name}&tipo=movies">${info.genres[i].name}. </a></p>`
+                `<p><a href="./detail-generes.html?id=${info.genres[i].id}">${info.genres[i].name}. </a></p>`
         }
         query.innerHTML += generos
 
-         ///PLATAFORMAS 
-         fetch(`https://api.themoviedb.org/3/tv/${id}/watch/providers?api_key=400f43d154bc968e0f7c02f3b9187c48`)
-         .then (function(response) {
-         return response.json();
-       }) 
+        ///PLATAFORMAS 
+        fetch(`https://api.themoviedb.org/3/tv/${id2}/watch/providers?api_key=400f43d154bc968e0f7c02f3b9187c48`)
+            .then (function(response) {
+            return response.json();
+          }) 
 
-         .then(function(data2){
-           console.log (data2)
-           let plataformas = document.querySelector(".plataformas")
-           let elementoslista= ""
-
-           for (let i = 0; i < data2.results.US.flatrate.length; i++){
-             elementoslista +=
-                             `<li>${data2.results.US.flatrate[i].provider_name}.</li>`
-         }
-         console.log(elementoslista);
-         plataformas.innerHTML += elementoslista;
-           
-       })
-       
-       .catch(function(error){
-         console.log ('el error fue: ' + error);
-       })
-
-
+            .then(function(data2){
+              console.log (data2)
+              let info2= data2.results
+              let plataformas = document.querySelector(".plataformas")
+              if (info2.US !== undefined){
+                plataformas.innerHTML+= `${info2.US.flatrate[0].provider_name}`
+              } 
+              else if (info2.US !== undefined){
+                plataformas.innerHTML+= `${info2.US.buy[0].provider_name}`
+              }
+              else{
+                plataformas.innerHTML+= "Este título no se encuentra disponible en Estados Unidos."
+              }   
+          })  
+            .catch(function(error){
+              console.log ('el error fue: ' + error);
+            })
 
 })
 .catch(function (error) {
@@ -84,35 +81,35 @@ fetch(url)
 })
 
 //FAVS
-let favoritos = [];
+let favoritos2 = [];
 let recuperoStorage = localStorage.getItem('series_favoritas'); 
 
 if (recuperoStorage != null) {
-    favoritos = JSON.parse(recuperoStorage);
+    favoritos2 = JSON.parse(recuperoStorage);
 }
 
 let favss = document.querySelector('.boton2');
 
-if (favoritos.includes(id)) {
+if (favoritos2.includes(id2)) {
     favss.innerText = "Quitar de favoritos"
 }
 
 favss.addEventListener('click', function (evento) {
     evento.preventDefault();
 
-    if (favoritos.includes(id)) {
-        let indice = favoritos.indexOf(id);
+    if (favoritos2.includes(id2)) {
+        let indice = favoritos2.indexOf(id2);
 
-        favoritos.splice(indice, 1)
+        favoritos2.splice(indice, 1)
         favss.innerText = "Agregar a favoritos"
     }
 
     else { 
-        favoritos.push(id);
+        favoritos2.push(id2);
         favss.innerText = "Quitar de favoritos";
     }
 
-    let favsToString = JSON.stringify(favoritos); 
+    let favsToString = JSON.stringify(favoritos2); 
 
     localStorage.setItem("series_favoritas", favsToString);
 

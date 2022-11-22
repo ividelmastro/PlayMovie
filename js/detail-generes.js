@@ -82,20 +82,18 @@ let id2 = qsObject2.get('id');
 let url2 = `https://api.themoviedb.org/3/discover/tv?api_key=400f43d154bc968e0f7c02f3b9187c48&language=en-US&with_genres=${id2}`
 
 
-
-
 fetch(url2)
     .then(function (response) {
         return response.json();
     })
 
-    .then(function (data) {
-        console.log(data);
+    .then(function (data2) {
+        console.log(data2);
 
-        let info2 = data.results
+        let info2 = data2.results
 
         //capturo el DOM//
-        let lista2 = document.querySelector('.detalles_peliculas_genero') 
+        let lista2 = document.querySelector('.detalles_series_genero') 
 
         //variable vacia para luego insertar los articulos//
         let elementosSeries = ''
@@ -103,8 +101,8 @@ fetch(url2)
         for (let i = 0; i < info2.length; i++) {
           if (info2[i].poster_path == null) {
               elementosSeries +=
-                                    `<article class="pelicula">
-                                    <a class = "hipervinculo" href="./detail-serie.html?id2=${info2[i].id}">
+                                    `<article class="serie">
+                                    <a class = "hipervinculo" href="./detail-serie.html?id=${info2[i].id2}">
                                     <img class = "imagenPP" src="./img/imagen-no-disponible.jpeg" alt="Portada">
                                     <p class= "titulo"> ${info2[i].original_name} </p>
                                     <p class ="estreno"> Estreno: ${info2[i].first_air_date}</p>
@@ -112,8 +110,8 @@ fetch(url2)
                                     </article>`
           } else {
               elementosSeries +=
-                                  `<article class="pelicula">
-                                  <a class = "hipervinculo" href="./detail-serie.html?id2=${info2[i].id}">
+                                  `<article class="serie">
+                                  <a class = "hipervinculo" href="./detail-serie.html?id=${info2[i].id2}">
                                   <img class = "imagenPP" src="https://image.tmdb.org/t/p/w500/${info2[i].backdrop_path}" alt="Portada">
                                   <p class= "titulo"> ${info2[i].original_name} </p>
                                   <p class ="estreno"> Estreno: ${info2[i].first_air_date}</p>
@@ -130,3 +128,4 @@ fetch(url2)
     .catch(function (error) {
         console.log("Error: " + error)
     })
+

@@ -62,25 +62,17 @@ fetch(url)
 
             .then(function(data2){
               console.log (data2)
+              let info2= data2.results
               let plataformas = document.querySelector(".plataformas")
-              let elementoslista= ""
-                
-              if (data2.results.US.flatrate == null || data2.results.US.flatrate ==""){
-                elementoslista += "<p>Por el momento no se encuentra disponible en ninguna plataforma. </p> "
-              }
-              for (let i = 0; i < data2.results.US.flatrate.length; i++){
-                elementoslista +=
-                                `<li>${data2.results.US.flatrate[i].provider_name}.</li>`
-            }
-
-            console.log(elementoslista);
-            plataformas.innerHTML += elementoslista;
-              
-          })
-          
-          .catch(function(error){
-            console.log ('el error fue: ' + error);
-          })
+              if (info2.US !== undefined){
+                plataformas.innerHTML+= `${info2.US.flatrate[0].provider_name}`
+              } else{
+                plataformas.innerHTML+= "Este título no se encuentra disponible en Estados Unidos."
+              }   
+          })  
+            .catch(function(error){
+              console.log ('el error fue: ' + error);
+            })
 
 })
 .catch(function (error) {
@@ -144,7 +136,7 @@ return response.json();
 
 .then(function(data3){
   console.log (data3)
-  info2= data.results
+  info3= data3.results
   let recomendaciones = document.querySelector(".recomendaciones");
   let cuerpo = document.querySelector(".peliculas_recomendadas")
   let titulos = document.querySelector(".titulos_peliculas")
