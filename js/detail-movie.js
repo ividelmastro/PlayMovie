@@ -144,7 +144,7 @@ fetch(url2)
             let recomendadas = " "
             
             for (let i = 0; i < 3; i++) {
-              recomendaciones +=`<a class = "hipervinculo" href="detail-movie.html?id=${info2[i].id}"> 
+              recomendadas +=`<a class = "hipervinculo" href="detail-movie.html?id=${info2[i].id}"> 
                                     <article class = "pelicula">
                                     <img class ="imagenPP" src= "https://image.tmdb.org/t/p/w500/${info2[i].backdrop_path}" alt=''/>
                                     <p class= "titulo"> ${info2[i].original_title} </p>
@@ -166,13 +166,13 @@ if (activo){
 botonrec.addEventListener("click", function(evento) {
     evento.preventDefault();
     if (activo){
-      botonrec.innerText = "Ver Recomendadas";
-      getRecom.style.display = "none";
+      botonrec.innerText = "Ocultar Recomendaciones";
+      getRecom.style.display = "flex";
       activo = false;
     }
     else{
-      botonrec.innerText = "Ocultar Recomendadas";
-      getRecom.style.display = "flex";
+      botonrec.innerText = "Ver Recomendaciones";
+      getRecom.style.display = "none";
       activo = true;
 
     }

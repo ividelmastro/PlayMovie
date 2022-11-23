@@ -51,7 +51,7 @@ fetch(url)
                                   <p class ="estreno"> Estreno: ${info[i].release_date}</p>
                                   </a>
                                   </article>`
-          }g
+          }
       }
 
     
