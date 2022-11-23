@@ -1,9 +1,9 @@
-let formulario = document.querySelector('.busqueda');
+
 let campo = document.querySelector('.search');
 let texto = document.querySelector('.texto-usuario');
 
-///    
-formulario.addEventListener('submit', function (evento) {
+let formulario = document.querySelector('.busqueda');
+   formulario.addEventListener('submit', function (evento) {
     evento.preventDefault()
     console.log("Error. Sin enviar");
 
