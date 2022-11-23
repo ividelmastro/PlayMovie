@@ -1,4 +1,3 @@
-
 let campo = document.querySelector('.search');
 let texto = document.querySelector('.texto-usuario');
 
@@ -25,6 +24,3 @@ let formulario = document.querySelector('.busqueda');
     }
 
 })
-
-
-

@@ -1,5 +1,3 @@
-///GENERO PELICULAS
-
 let url= `https://api.themoviedb.org/3/genre/movie/list?api_key=400f43d154bc968e0f7c02f3b9187c48&language=en-US`
 
 fetch(url)

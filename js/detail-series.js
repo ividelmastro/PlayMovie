@@ -1,14 +1,8 @@
 let queryString2= location.search
-
-
 let qsObject2 = new URLSearchParams(location.search)
-
 let id2 = qsObject2.get("id")
 console.log(id2)
-
 let url2 = `https://api.themoviedb.org/3/tv/${id2}?api_key=400f43d154bc968e0f7c02f3b9187c48&language=en-US`
-
-
 
 //FETCH
 fetch(url2)
@@ -116,4 +110,3 @@ favss.addEventListener('click', function (evento) {
     console.log(localStorage);
 
 })
-

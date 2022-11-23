@@ -181,5 +181,3 @@ botonrec.addEventListener("click", function(evento) {
 .catch(function(error){
 console.log ('el error fue: ' + error);
 })
-
-
