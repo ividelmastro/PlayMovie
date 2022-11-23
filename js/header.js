@@ -5,7 +5,7 @@ let texto = document.querySelector('.texto-usuario');
 let formulario = document.querySelector('.busqueda');
    formulario.addEventListener('submit', function (evento) {
     evento.preventDefault()
-    console.log("Error. Sin enviar");
+
 
     if (campo.value == "") {
         texto.innerText = "El campo es obligatorio.";
@@ -26,8 +26,5 @@ let formulario = document.querySelector('.busqueda');
 
 })
 
-campo.addEventListener('focus', function () {
-    texto.innerText = '';
-    campo.style.outline = "auto"
-})
+
 

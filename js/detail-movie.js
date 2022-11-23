@@ -130,6 +130,8 @@ fav.addEventListener('click', function (evento) {
 
 let url2= `https://api.themoviedb.org/3/movie/${id}/recommendations?api_key=400f43d154bc968e0f7c02f3b9187c48&language=en-US&page=1`
 
+let activo = true
+
 fetch(url2)
           .then (function(response) {
             return response.json();
@@ -138,25 +140,26 @@ fetch(url2)
           .then(function(data3){
             let info2 = data3.results
             console.log (data3)
-
-            let botonrec = document.querySelector(".botonrec")
-            let recomendaciones = document.querySelector(".recomendaciones");
-            let recomendadas = " "
             let getRecom = document.querySelector("#getRecom")
+            let recomendadas = " "
+            
             for (let i = 0; i < 3; i++) {
               recomendaciones +=`<a class = "hipervinculo" href="detail-movie.html?id=${info2[i].id}"> 
-              <article class = "pelicula">
-              <img class ="imagenPP" src= "https://image.tmdb.org/t/p/w500/${info2[i].backdrop_path}" alt=''/>
-              <p class= "titulo"> ${info2[i].original_title} </p>
-              <p class ="estreno"> Estreno: ${info2[i].release_date}</p>
-              </article>
-              <a/>`
+                                    <article class = "pelicula">
+                                    <img class ="imagenPP" src= "https://image.tmdb.org/t/p/w500/${info2[i].backdrop_path}" alt=''/>
+                                    <p class= "titulo"> ${info2[i].original_title} </p>
+                                    <p class ="estreno"> Estreno: ${info2[i].release_date}</p>
+                                    <a href ="./detail-movie.html?id=${info2[i].id}" class="detalle"></a>
+                                    </article>
+                                  <a/>`
             }
-            recomendaciones.innerHTML = recomendadas
+            getRecom.innerHTML = recomendadas
           })
 
+let botonrec = document.querySelector(".botonrec")
+
 if (activo){
-    botonrec.innerText = "Ver recomendadas";
+    botonrec.innerText = "Ver Recomendaciones";
     getRecom.style.display = "none";
 
   }

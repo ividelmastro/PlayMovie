@@ -241,6 +241,18 @@ footer {
     color: black;
 }
 
+.botonrec{
+    border: solid 3px white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: #fff;
+}
+
+.botonrec:hover{
+    background-color: #fff;
+    color: black;
+}
+
 .infopelicula{
     color: aliceblue;
 }
