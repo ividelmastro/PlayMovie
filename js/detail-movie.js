@@ -140,7 +140,7 @@ fetch(url2)
           .then(function(data3){
             let info2 = data3.results
             console.log (data3)
-            let getRecom = document.querySelector("#getRecom")
+            let recomendaciones = document.querySelector("#recomendaciones")
             let recomendadas = " "
             
             for (let i = 0; i < 3; i++) {
@@ -153,26 +153,26 @@ fetch(url2)
                                     </article>
                                   <a/>`
             }
-            getRecom.innerHTML = recomendadas
+            recomendaciones.innerHTML = recomendadas
           })
 
-let botonrec = document.querySelector(".botonrec")
+let botonrec = document.querySelector(".boton_recomendaciones")
 
 if (activo){
     botonrec.innerText = "Ver Recomendaciones";
-    getRecom.style.display = "none";
+    recomendaciones.style.display = "none";
 
   }
 botonrec.addEventListener("click", function(evento) {
     evento.preventDefault();
     if (activo){
       botonrec.innerText = "Ocultar Recomendaciones";
-      getRecom.style.display = "flex";
+      recomendaciones.style.display = "flex";
       activo = false;
     }
     else{
       botonrec.innerText = "Ver Recomendaciones";
-      getRecom.style.display = "none";
+      recomendaciones.style.display = "none";
       activo = true;
 
     }

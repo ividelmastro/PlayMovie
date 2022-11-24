@@ -241,14 +241,14 @@ footer {
     color: black;
 }
 
-.botonrec{
+.boton_recomendaciones{
     border: solid 3px white;
     border-radius: 5px;
     padding: 10px 20px;
     color: #fff;
 }
 
-.botonrec:hover{
+.boton_recomendaciones:hover{
     background-color: #fff;
     color: black;
 }

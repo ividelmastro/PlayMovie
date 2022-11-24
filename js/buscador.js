@@ -24,3 +24,4 @@ let formulario = document.querySelector('.busqueda');
     }
 
 })
+

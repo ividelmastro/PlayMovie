@@ -110,3 +110,61 @@ favss.addEventListener('click', function (evento) {
     console.log(localStorage);
 
 })
+
+
+///RECOMENDACIONES:
+
+
+let url3= `https://api.themoviedb.org/3/tv/${id2}/recommendations?api_key=400f43d154bc968e0f7c02f3b9187c48&language=en-US&page=1`
+
+let activo = true
+
+fetch(url3)
+          .then (function(response) {
+            return response.json();
+          }) 
+
+          .then(function(data3){
+            let info3 = data3.results
+            console.log (data3)
+            let recomendaciones = document.querySelector("#recomendaciones")
+            let recomendadas = " "
+            
+            for (let i = 0; i < 3; i++) {
+              recomendadas +=`<a class = "hipervinculo" href="detail-serie.html?id=${info3[i].id2}"> 
+                                    <article class = "serie">
+                                    <img class ="imagenPP" src= "https://image.tmdb.org/t/p/w500/${info3[i].backdrop_path}" alt=''/>
+                                    <p class= "titulo"> ${info3[i].name} </p>
+                                    <p class ="estreno"> Estreno: ${info3[i].first_air_date}</p>
+                                    <a href ="./detail-serie.html?id=${info3[i].id2}" class="detalle"></a>
+                                    </article>
+                                  <a/>`
+            }
+            recomendaciones.innerHTML = recomendadas
+          })
+
+let botonrec = document.querySelector(".boton_recomendaciones")
+
+if (activo){
+    botonrec.innerText = "Ver Recomendaciones";
+    recomendaciones.style.display = "none";
+
+  }
+botonrec.addEventListener("click", function(evento) {
+    evento.preventDefault();
+    if (activo){
+      botonrec.innerText = "Ocultar Recomendaciones";
+      recomendaciones.style.display = "flex";
+      activo = false;
+    }
+    else{
+      botonrec.innerText = "Ver Recomendaciones";
+      recomendaciones.style.display = "none";
+      activo = true;
+
+    }
+  })
+
+.catch(function(error){
+console.log ('el error fue: ' + error);
+})
