@@ -25,3 +25,8 @@ let formulario = document.querySelector('.busqueda');
 
 })
 
+campo.addEventListener('focus', function () {
+    texto.innerText = '';
+    campo.style.outline = "auto"
+})
+

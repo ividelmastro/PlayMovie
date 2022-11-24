@@ -19,7 +19,8 @@ fetch(url2)
         let elementosLista = ''
         if (info_api.length == 0) {
             let texto = document.querySelector('.texto')
-            texto.innerText = `No hay resultado para su búsqueda":`
+            texto.innerText = `No hay resultado para su búsqueda`
+            texto.style.color = "white"
         } else {
             for (let i = 0; i < info_api.length; i++) {
                 console.log(info_api[i]);
@@ -61,3 +62,9 @@ fetch(url2)
             console.log("Error: " + error)
         })
 }
+
+window.addEventListener('load', function (evento) {
+    let gif = document.querySelector(".gif")
+    gif.style.display = "none";
+
+})
