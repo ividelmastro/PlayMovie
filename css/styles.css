@@ -253,6 +253,10 @@ footer {
     color: black;
 }
 
+.logo_plat{
+    width: 50px;
+}
+
 .infopelicula{
     color: aliceblue;
 }

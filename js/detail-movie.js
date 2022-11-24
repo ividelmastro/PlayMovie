@@ -65,7 +65,9 @@ fetch(url)
               let info2= data2.results
               let plataformas = document.querySelector(".plataformas")
               if (info2.US !== undefined){
-                plataformas.innerHTML+= `${info2.US.flatrate[0].provider_name}`
+                plataformas.innerHTML+= `${info2.US.flatrate[0].provider_name}
+                                          <img class ="logo_plat" src="https://image.tmdb.org/t/p/w500/${info2.US.flatrate[0].logo_path}" alt="logo">`
+                                          
               } else{
                 plataformas.innerHTML+= "Este título no se encuentra disponible en Estados Unidos."
               }   
